@@ -1,0 +1,101 @@
+.articles-page {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+  
+  .article-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    padding: 20px;
+  }
+  
+  .article-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .article-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+  }
+  
+  .article-author,
+  .article-date {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .article-content {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .article-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .tag {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin-right: 10px;
+    font-size: 14px;
+  }
+  
+  .likes-comments {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .likes, .comments {
+    margin-right: 20px;
+  }
+  
+  .comments-section {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+  }
+  
+  .comment {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  .comment-author {
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .comment-text {
+    font-size: 14px;
+    color: #666;
+  }
+  

@@ -1,0 +1,32 @@
+<div class="articles-page">
+    <h1>Tous les Articles</h1>
+    
+    <div class="article-card" *ngFor="let article of articles">
+      <div class="article-header">
+        <h2 class="article-title">{{ article.title }}</h2>
+        <span class="article-author">Par {{ article.author }}</span>
+        <span class="article-date">{{ article.created_at | date:'dd/MM/yyyy' }}</span>
+      </div>
+  
+      <p class="article-content">{{ article.content }}</p>
+      
+      <div class="article-footer">
+        <div class="tags">
+          <span class="tag" *ngFor="let tag of article.tags">{{ tag }}</span>
+        </div>
+        <div class="likes-comments">
+          <span class="likes">{{ article.likes }} Likes</span>
+          <span class="comments">{{ article.comments.length }} Commentaires</span>
+        </div>
+      </div>
+      
+      <div class="comments-section">
+        <h3>Commentaires :</h3>
+        <div class="comment" *ngFor="let comment of article.comments">
+          <p class="comment-author"><strong>{{ comment.author }}:</strong></p>
+          <p class="comment-text">{{ comment.text }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  

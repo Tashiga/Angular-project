@@ -1,0 +1,56 @@
+<div class="add-article-container">
+    <h1>Ajouter un Article</h1>
+    
+    <form (ngSubmit)="onSubmit()" #articleForm="ngForm">
+      <div class="form-group">
+        <label for="title">Titre de l'Article</label>
+        <input 
+          type="text" 
+          id="title" 
+          name="title" 
+          [(ngModel)]="article.title" 
+          class="form-control" 
+          required 
+          #title="ngModel" 
+        />
+        <div *ngIf="title.invalid && title.touched" class="error-message">
+          Le titre est requis.
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="content">Contenu de l'Article</label>
+        <textarea 
+          id="content" 
+          name="content" 
+          [(ngModel)]="article.content" 
+          class="form-control" 
+          required 
+          #content="ngModel"></textarea>
+        <div *ngIf="content.invalid && content.touched" class="error-message">
+          Le contenu est requis.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="tags">Tags (séparez les tags par des virgules)</label>
+        <input 
+          type="text" 
+          id="tags" 
+          name="tags" 
+          [(ngModel)]="article.tags" 
+          class="form-control" 
+          required 
+          #tags="ngModel" 
+        />
+        <div *ngIf="tags.invalid && tags.touched" class="error-message">
+          Les tags sont requis.
+        </div>
+      </div>
+      
+      <button type="submit" [disabled]="articleForm.invalid" class="btn-submit">
+        Ajouter l'Article
+      </button>
+    </form>
+  </div>
+  
