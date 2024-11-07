@@ -1,0 +1,42 @@
+h2, .account-settings-form h3 {
+    color: #333333;
+    text-align: center;
+}
+
+.account-settings-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.account-settings-form label {
+    font-size: 0.9em;
+    color: #555555;
+}
+
+.account-settings-form input[type="text"],
+.account-settings-form input[type="password"] {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+}
+
+.account-settings-form input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.account-settings-form button {
+    padding: 10px;
+    font-size: 1em;
+    color: #ffffff;
+    background-color: #0073e6;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.account-settings-form button:hover {
+    background-color: #005bb5;
+}

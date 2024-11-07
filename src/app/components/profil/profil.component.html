@@ -1,0 +1,21 @@
+<div class="profil-page">
+    <h1 class="page-title">Votre profil</h1>
+    <div class="profile-container">
+        <!-- Informations personnelles -->
+        <section class="profile-card">
+            <app-profile-info [user] = user></app-profile-info>
+        </section>
+        <!-- Tableau des connexions utilisateur -->
+        <section class="connections-section">
+            <app-connection-history></app-connection-history>
+        </section>
+        <!-- Paramètres de compte : notifications -->
+        <section class="account-settings-section">
+            <app-account-settings></app-account-settings>
+        </section>
+        <!-- visionner les actions de l'utilisateur (articles, commentaires ou likes) -->
+        <section>
+            <h2>Bonjour</h2>
+        </section>
+    </div>
+</div>

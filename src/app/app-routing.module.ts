@@ -6,6 +6,7 @@ import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { ArticleFormComponent } from './components/article-form/article-form.component';
 import { ArticlesComponent } from './components/articles/articles.component';
+import { ProfilComponent } from './components/profil/profil.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent },
   { path: 'new-article', component: ArticleFormComponent },
   { path: 'articles', component: ArticlesComponent },
+  { path: 'profile', component: ProfilComponent },
   { path: '**', component: ErrorPageComponent }
 ];
 

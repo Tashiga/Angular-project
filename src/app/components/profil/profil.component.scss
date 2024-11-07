@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 20px;
+    color: #333333;
+}
+
+//profile
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.profile-card {
+    width: 300px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+//connection history
+.connections-section {
+    width: 60%;
+}
+
+//account settings
+.account-settings-section {
+    width: 100%;
+    max-width: 400px;
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+//
+.profile-container {
+    display: flex;
+    flex-wrap: wrap; /* Permet d'aller sur une nouvelle ligne si la largeur est dépassée */
+    gap: 20px;
+    justify-content: center;
+}
+
+.profile-card,
+.connections-section,
+.account-settings-section {
+    flex: 1 1 300px; /* Largeur minimum de chaque section pour s'adapter à l'écran */
+    max-width: 400px;
+}
+
+  
+
+  
+  

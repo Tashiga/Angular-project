@@ -7,7 +7,7 @@
         "password": "hashedpassword1",
         "created_at": "2024-01-01T10:00:00Z",
         "bio": "A passionate blogger about tech and lifestyle.",
-        "avatar_url": "https://example.com/avatar1.jpg"
+        "avatar_url": "https://pub-static.fotor.com/assets/projects/pages/d5bdd0513a0740a8a38752dbc32586d0/fotor-03d1a91a0cec4542927f53c87e0599f6.jpg"
       },
       {
         "id": 2,
@@ -16,7 +16,7 @@
         "password": "hashedpassword2",
         "created_at": "2024-01-10T11:00:00Z",
         "bio": "Lover of science and art.",
-        "avatar_url": "https://example.com/avatar2.jpg"
+        "avatar_url": "https://img.freepik.com/vecteurs-premium/jeune-homme-visage-avatar-vecteur-illustration-conception_968209-16.jpg"
       },
       {
         "id": 3,

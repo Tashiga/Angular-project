@@ -1,0 +1,100 @@
+.profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 3px solid #0073e6;
+}
+
+.profile-username {
+    font-size: 1.5em;
+    margin: 0;
+    color: #333333;
+}
+
+.profile-email {
+    font-size: 0.9em;
+    color: #777777;
+    margin: 5px 0;
+}
+
+.profile-bio {
+    font-size: 1em;
+    color: #555555;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+.profile-info {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #666666;
+}
+
+.profile-info strong {
+    color: #333333;
+}
+
+//updates
+.editable-info {
+    position: relative;
+    display: inline-block;
+}
+
+.edit-icon {
+    font-size: 0.9em;
+    color: #0073e6;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.edit-icon:hover {
+    color: #005bb5;
+}
+
+input.edit-input {
+    font-size: 1em;
+    padding: 5px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    width: 80%;
+    margin-top: 5px;
+}
+
+.update-button-container {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .update-button-container button {
+    padding: 10px;
+    font-size: 1em;
+    color: #ffffff;
+    background-color: #0073e6;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .update-button-container button:hover {
+    background-color: #005bb5;
+  }
+  
+  .update-button-container button:last-child {
+    background-color: #f44336;
+  }
+  
+  .update-button-container button:last-child:hover {
+    background-color: #d32f2f;
+  }
+  
+  input[type="text"], textarea {
+    width: 100%;
+    padding: 5px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }

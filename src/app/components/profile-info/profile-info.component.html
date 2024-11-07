@@ -1,0 +1,41 @@
+<div class="profile-header">
+    <img [src]="user.avatarUrl" alt="Photo de profil" class="profile-avatar">
+  
+    <!-- Username Edit -->
+    <div class="editable-field">
+      <h2 *ngIf="!isEditing['username']" (click)="startEditing('username')">
+        {{ user.username }}
+        <span class="edit-icon">✏️</span>
+      </h2>
+      <input *ngIf="isEditing['username']" [(ngModel)]="user.username" />
+    </div>
+  
+    <!-- Email Edit -->
+    <div class="editable-field">
+      <p *ngIf="!isEditing['email']" (click)="startEditing('email')">
+        {{ user.email }}
+        <span class="edit-icon">✏️</span>
+      </p>
+      <input *ngIf="isEditing['email']" [(ngModel)]="user.email" />
+    </div>
+  
+    <!-- Bio Edit -->
+    <div class="editable-field">
+      <p *ngIf="!isEditing['bio']" (click)="startEditing('bio')">
+        {{ user.bio }}
+        <span class="edit-icon">✏️</span>
+      </p>
+      <textarea *ngIf="isEditing['bio']" [(ngModel)]="user.bio"></textarea>
+    </div>
+  
+    <div class="profile-info">
+      <p><strong>Date d'inscription :</strong> {{ user.createdAt | date:'dd MMMM yyyy' }}</p>
+    </div>
+  
+    <!-- Update Button -->
+    <div *ngIf="showUpdateButton" class="update-button-container">
+      <button (click)="saveChanges()">Update</button>
+      <button (click)="cancelEditing()">Cancel</button>
+    </div>
+  </div>
+  
