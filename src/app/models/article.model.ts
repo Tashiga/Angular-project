@@ -11,3 +11,15 @@ export interface Article {
     likes: number;
     comments: Comment[];
   }
+
+  export const ArticleInit : Article = {
+    id: 0,
+    title: '',
+    content: '',
+    author: '',
+    created_at: '',
+    updated_at: '',
+    tags: [],
+    likes: 0,
+    comments: [],
+  };

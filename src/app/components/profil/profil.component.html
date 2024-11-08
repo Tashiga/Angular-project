@@ -1,4 +1,4 @@
-<div class="profil-page">
+<div class="profil-page" *ngIf="isLoggedIn">
     <h1 class="page-title">Votre profil</h1>
     <div class="profile-container">
         <!-- Informations personnelles -->
@@ -18,4 +18,9 @@
             <h2>Bonjour</h2>
         </section>
     </div>
+    <h1 class="page-title" (click)="logOut()">Déconnecter</h1>
+</div>
+
+<div *ngIf="!isLoggedIn">
+    <h1>Vous nous vous êtes pas connecté : <a href="/login">me connecter</a></h1>
 </div>

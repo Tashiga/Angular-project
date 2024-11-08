@@ -10,8 +10,16 @@
         <li><a href="/contact">Contact</a></li>
         </ul>
     </nav>
-    <div class="user-actions">
+    <div class="user-actions" *ngIf="!isLogged">
         <a href="/login" class="login-btn">Se connecter</a>
         <a href="/signup" class="signup-btn">S'inscrire</a>
     </div>
+    <div class="user-menu" *ngIf="isLogged">
+        <img [src]="user.avatar_url" alt="Avatar de {{ user.username }}" class="user-avatar">
+        <span class="username">{{ user.username }}</span>
+        <div class="dropdown-menu">
+          <a routerLink="/profile">Mon Profil</a>
+          <a (click)="logout()">Déconnexion</a>
+        </div>
+      </div>
 </header>

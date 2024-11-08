@@ -1,13 +1,15 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { User, UserInit } from 'src/app/models/user.model';
 
 @Component({
   selector: 'app-profile-info',
   templateUrl: './profile-info.component.html',
   styleUrls: ['./profile-info.component.scss']
 })
-export class ProfileInfoComponent {
+export class ProfileInfoComponent implements OnInit{
 
-  @Input() user: any; // Passez les informations utilisateur depuis le composant parent
+  profileForm !: FormGroup;
   isEditing: { [key: string]: boolean } = {
     username: false,
     email: false,
@@ -15,9 +17,17 @@ export class ProfileInfoComponent {
   };
   showUpdateButton = false;
 
-  constructor(){
-    console.log("test - ", this.isEditing);
-    console.log("test.username - ", this.isEditing['username']);
+  @Input('user') 
+  user: User = UserInit;
+
+  constructor(private fb: FormBuilder){}
+
+  ngOnInit(): void {
+    this.profileForm = this.fb.group({
+      username: [this.user.username, Validators.required],
+      email: [this.user.email, [Validators.required, Validators.email]],
+      bio: [this.user.bio]
+    });
   }
 
   startEditing(field: string): void {
@@ -26,12 +36,30 @@ export class ProfileInfoComponent {
   }
 
   saveChanges(): void {
-    // Logique pour enregistrer les modifications
-    this.showUpdateButton = false;
-    Object.keys(this.isEditing).forEach(key => this.isEditing[key] = false);
+    if (this.profileForm.valid) {
+      const confirmation = window.confirm("Êtes-vous sûr de vouloir changer vos informations ?");
+      if(confirmation){
+        this.user.username = this.profileForm.value.username;
+        this.user.email = this.profileForm.value.email;
+        this.user.bio = this.profileForm.value.bio;
+
+        this.showUpdateButton = false;
+        Object.keys(this.isEditing).forEach(key => this.isEditing[key] = false);
+        console.log('Informations mises à jour:', this.user);
+      }
+      // else {
+      //   this.cancelEditing();
+      // }
+    }
+    
   }
 
   cancelEditing(): void {
+    this.profileForm.patchValue({
+      username: this.user.username,
+      email: this.user.email,
+      bio: this.user.bio
+    });
     this.showUpdateButton = false;
     Object.keys(this.isEditing).forEach(key => this.isEditing[key] = false);
   }

@@ -1,19 +1,18 @@
 <div class="add-article-container">
     <h1>Ajouter un Article</h1>
     
-    <form (ngSubmit)="onSubmit()" #articleForm="ngForm">
+    <form (ngSubmit)="onSubmit()" [formGroup]="articleForm">
       <div class="form-group">
         <label for="title">Titre de l'Article</label>
         <input 
           type="text" 
           id="title" 
           name="title" 
-          [(ngModel)]="article.title" 
+          formControlName="title"
           class="form-control" 
-          required 
-          #title="ngModel" 
+          required
         />
-        <div *ngIf="title.invalid && title.touched" class="error-message">
+        <div *ngIf="articleForm.get('title')!.invalid && articleForm.get('title')!.touched" class="error-message">
           Le titre est requis.
         </div>
       </div>
@@ -23,11 +22,10 @@
         <textarea 
           id="content" 
           name="content" 
-          [(ngModel)]="article.content" 
+          formControlName="content" 
           class="form-control" 
-          required 
-          #content="ngModel"></textarea>
-        <div *ngIf="content.invalid && content.touched" class="error-message">
+          required></textarea>
+        <div *ngIf="articleForm.get('content')!.invalid && articleForm.get('content')!.touched" class="error-message">
           Le contenu est requis.
         </div>
       </div>
@@ -38,12 +36,11 @@
           type="text" 
           id="tags" 
           name="tags" 
-          [(ngModel)]="article.tags" 
+          formControlName="tags" 
           class="form-control" 
-          required 
-          #tags="ngModel" 
+          required
         />
-        <div *ngIf="tags.invalid && tags.touched" class="error-message">
+        <div *ngIf="articleForm.get('tags')!.invalid && articleForm.get('tags')!.touched" class="error-message">
           Les tags sont requis.
         </div>
       </div>

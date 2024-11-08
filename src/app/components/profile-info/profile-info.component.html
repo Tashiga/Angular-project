@@ -1,5 +1,5 @@
-<div class="profile-header">
-    <img [src]="user.avatarUrl" alt="Photo de profil" class="profile-avatar">
+<div class="profile-header" [formGroup]="profileForm">
+    <img [src]="user.avatar_url" alt="Photo de profil" class="profile-avatar">
   
     <!-- Username Edit -->
     <div class="editable-field">
@@ -7,7 +7,7 @@
         {{ user.username }}
         <span class="edit-icon">✏️</span>
       </h2>
-      <input *ngIf="isEditing['username']" [(ngModel)]="user.username" />
+      <input *ngIf="isEditing['username']" formControlName="username" placeholder="{{user.username}}"/>
     </div>
   
     <!-- Email Edit -->
@@ -16,7 +16,7 @@
         {{ user.email }}
         <span class="edit-icon">✏️</span>
       </p>
-      <input *ngIf="isEditing['email']" [(ngModel)]="user.email" />
+      <input *ngIf="isEditing['email']" formControlName="email" type="email" placeholder="{{user.email}}" />
     </div>
   
     <!-- Bio Edit -->
@@ -25,11 +25,11 @@
         {{ user.bio }}
         <span class="edit-icon">✏️</span>
       </p>
-      <textarea *ngIf="isEditing['bio']" [(ngModel)]="user.bio"></textarea>
+      <textarea *ngIf="isEditing['bio']" formControlName="bio" placeholder="{{user.bio}}"></textarea>
     </div>
   
     <div class="profile-info">
-      <p><strong>Date d'inscription :</strong> {{ user.createdAt | date:'dd MMMM yyyy' }}</p>
+      <p><strong>Date d'inscription :</strong> {{ user.created_at | date:'dd MMMM yyyy' }}</p>
     </div>
   
     <!-- Update Button -->

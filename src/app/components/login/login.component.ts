@@ -1,19 +1,50 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  loginForm!: FormGroup;
+  private isLogged: boolean = false;
 
-    onSubmit() {
-    // Logique pour traiter l'authentification (vous pouvez appeler un service d'authentification ici)
-    // Pour l'exemple, on navigue simplement vers la page d'accueil après l'authentification réussie
-    this.router.navigate(['/home']);
+  constructor(private router: Router, 
+              private fb: FormBuilder, 
+              private authService: AuthService
+            ) { }
+
+  ngOnInit(): void {
+    this.loginForm = this.fb.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]]
+    });
+    this.authService.isLogged$.subscribe((logged)=> {
+      this.isLogged = logged;
+    });
+    if(this.isLogged)
+      this.router.navigate(['/profile']);
+  }
+
+  onSubmit(): void {
+    if (this.loginForm.valid) {
+      const { email, password } = this.loginForm.value;
+      console.log("formulaire : ", { email, password });
+      this.authService.login(email, password).subscribe((isLogged) => {
+        if (!isLogged) {
+          console.log('Email ou mot de passe incorrect.');
+        } else {
+          console.log('Succés !');
+          this.router.navigate(['/profile']);
+        }
+      });
+    } else {
+      console.log('Formulaire invalide');
+    }
   }
 
 }

@@ -12,7 +12,7 @@ import { ErrorPageComponent } from './components/error-page/error-page.component
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { ArticleFormComponent } from './components/article-form/article-form.component';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { ArticlesComponent } from './components/articles/articles.component';
 import { ProfilComponent } from './components/profil/profil.component';
 import { ProfileInfoComponent } from './components/profile-info/profile-info.component';
@@ -40,7 +40,7 @@ import { AccountSettingsComponent } from './components/account-settings/account-
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
