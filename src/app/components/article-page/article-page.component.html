@@ -1,0 +1,28 @@
+<div class="article-page">
+
+    <div class="button-container">
+        <button [routerLink]="['/articles']">Retour à la liste des articles</button>
+    </div>
+    <div class="article-header">
+      <h1 class="article-title">{{ article.title }}</h1>
+      <span class="article-author">Par {{ article.author }}</span>
+      <span class="article-date">{{ article.created_at | date:'dd/MM/yyyy' }}</span>
+    </div>
+  
+    <div class="article-content">
+      <p>{{ article.content }}</p>
+    </div>
+  
+    <div class="article-footer">
+      <div class="tags">
+        <span class="tag" *ngFor="let tag of article.tags">{{ tag }}</span>
+      </div>
+      <div class="likes-comments">
+        <span class="likes">{{ article.likes }} Likes</span>
+        <span class="comments">{{ article.comments.length }} Commentaires</span>
+      </div>
+    </div>
+
+    <app-article-comment [comments]=article.comments></app-article-comment>
+  </div>
+  

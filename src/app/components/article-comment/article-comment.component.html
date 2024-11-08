@@ -1,0 +1,7 @@
+<div class="comments-section">
+    <h3>Commentaires :</h3>
+    <div class="comment" *ngFor="let comment of comments">
+      <p class="comment-author"><strong>{{ comment.author}}:</strong></p>
+      <p class="comment-text">{{ comment.text }}</p>
+    </div>
+  </div>

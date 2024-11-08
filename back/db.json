@@ -1,123 +1,933 @@
 {
-    "users": [
-      {
-        "id": 1,
-        "username": "alice",
-        "email": "alice@example.com",
-        "password": "hashedpassword1",
-        "created_at": "2024-01-01T10:00:00Z",
-        "bio": "A passionate blogger about tech and lifestyle.",
-        "avatar_url": "https://pub-static.fotor.com/assets/projects/pages/d5bdd0513a0740a8a38752dbc32586d0/fotor-03d1a91a0cec4542927f53c87e0599f6.jpg"
-      },
-      {
-        "id": 2,
-        "username": "bob",
-        "email": "bob@example.com",
-        "password": "hashedpassword2",
-        "created_at": "2024-01-10T11:00:00Z",
-        "bio": "Lover of science and art.",
-        "avatar_url": "https://img.freepik.com/vecteurs-premium/jeune-homme-visage-avatar-vecteur-illustration-conception_968209-16.jpg"
-      },
-      {
-        "id": 3,
-        "username": "charlie",
-        "email": "charlie@example.com",
-        "password": "hashedpassword3",
-        "created_at": "2024-01-15T12:00:00Z",
-        "bio": "Exploring the world through words.",
-        "avatar_url": "https://example.com/avatar3.jpg"
-      }
-    ],
-    "articles": [
-      {
-        "id": 1,
-        "title": "Introduction to Angular",
-        "content": "Angular is a platform for building mobile and desktop web applications...",
-        "author_id": 1,
-        "created_at": "2024-02-01T09:00:00Z",
-        "updated_at": "2024-02-01T09:30:00Z",
-        "tags": ["Angular", "Frontend", "JavaScript"]
-      },
-      {
-        "id": 2,
-        "title": "The Art of Mindfulness",
-        "content": "Mindfulness is the practice of being present in the moment...",
-        "author_id": 2,
-        "created_at": "2024-02-05T10:00:00Z",
-        "updated_at": "2024-02-05T10:00:00Z",
-        "tags": ["Lifestyle", "Mindfulness", "Wellbeing"]
-      },
-      {
-        "id": 3,
-        "title": "Exploring the Cosmos",
-        "content": "The cosmos has always fascinated humanity...",
-        "author_id": 3,
-        "created_at": "2024-02-10T11:00:00Z",
-        "updated_at": "2024-02-10T11:00:00Z",
-        "tags": ["Science", "Astronomy", "Cosmos"]
-      }
-    ],
-    "comments": [
-      {
-        "id": 1,
-        "article_id": 1,
-        "user_id": 2,
-        "content": "Great article, very informative!",
-        "created_at": "2024-02-01T10:30:00Z"
-      },
-      {
-        "id": 2,
-        "article_id": 1,
-        "user_id": 3,
-        "content": "Thanks for the insights on Angular!",
-        "created_at": "2024-02-01T11:00:00Z"
-      },
-      {
-        "id": 3,
-        "article_id": 2,
-        "user_id": 1,
-        "content": "Mindfulness has truly changed my life.",
-        "created_at": "2024-02-05T12:00:00Z"
-      },
-      {
-        "id": 4,
-        "article_id": 3,
-        "user_id": 1,
-        "content": "Space is such a mystery!",
-        "created_at": "2024-02-10T12:30:00Z"
-      }
-    ],
-    "likes": [
-      {
-        "id": 1,
-        "article_id": 1,
-        "user_id": 2,
-        "created_at": "2024-02-01T10:15:00Z"
-      },
-      {
-        "id": 2,
-        "article_id": 1,
-        "user_id": 3,
-        "created_at": "2024-02-01T11:05:00Z"
-      },
-      {
-        "id": 3,
-        "article_id": 2,
-        "user_id": 1,
-        "created_at": "2024-02-05T12:05:00Z"
-      },
-      {
-        "id": 4,
-        "article_id": 3,
-        "user_id": 2,
-        "created_at": "2024-02-10T12:35:00Z"
-      },
-      {
-        "id": 5,
-        "article_id": 3,
-        "user_id": 3,
-        "created_at": "2024-02-10T12:40:00Z"
-      }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "username": "alice",
+      "email": "alice@example.com",
+      "password": "hashedpassword1",
+      "created_at": "2024-01-01T10:00:00Z",
+      "bio": "A passionate blogger about tech and lifestyle.",
+      "avatar_url": "https://pub-static.fotor.com/assets/projects/pages/d5bdd0513a0740a8a38752dbc32586d0/fotor-03d1a91a0cec4542927f53c87e0599f6.jpg"
+    },
+    {
+      "id": 2,
+      "username": "bob",
+      "email": "bob@example.com",
+      "password": "hashedpassword2",
+      "created_at": "2024-01-10T11:00:00Z",
+      "bio": "Lover of science and art.",
+      "avatar_url": "https://img.freepik.com/vecteurs-premium/jeune-homme-visage-avatar-vecteur-illustration-conception_968209-16.jpg"
+    },
+    {
+      "id": 3,
+      "username": "charlie",
+      "email": "charlie@example.com",
+      "password": "hashedpassword3",
+      "created_at": "2024-01-15T12:00:00Z",
+      "bio": "Exploring the world through words.",
+      "avatar_url": "https://example.com/avatar3.jpg"
+    }
+  ],
+  "articles": [
+    {
+      "id": 1,
+      "title": "🌍 Adopter un mode de vie durable",
+      "content": "Aujourd'hui, j'ai décidé de réduire mon utilisation de plastique. 🌱 Chaque petit geste compte et peut faire une grande différence dans la lutte pour préserver notre planète.\n\nLes statistiques montrent que si chacun de nous adopte des habitudes plus respectueuses de l'environnement, nous pourrions avoir un impact considérable. En commençant par des actions simples, comme refuser les sacs en plastique et utiliser des contenants réutilisables, nous pouvons inspirer les autres à faire de même.\n\nLa route vers un mode de vie zéro déchet est longue, mais chaque étape est gratifiante. Et vous, quels petits gestes faites-vous pour protéger la planète ? #Écologie #ZéroDéchet",
+      "author": "GreenQueen",
+      "created_at": "2024-07-15T08:00:00Z",
+      "updated_at": "2024-07-15T08:15:00Z",
+      "tags": [
+        "Écologie",
+        "Environnement"
+      ],
+      "likes": 250,
+      "comments": [
+        {
+          "author": "EcoWarrior",
+          "text": "J'adore ! 🌿 Sauvons la planète ensemble !"
+        },
+        {
+          "author": "NatureLover",
+          "text": "Un post inspirant ! Chaque geste compte !"
+        }
+      ],
+      "language": "fr",
+      "likesAuthorId": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": 2,
+      "title": "My Coding Journey",
+      "content": "After 6 months of studying, I can finally build my own websites! 🎉 It's been a tough but rewarding journey, filled with countless hours of coding and problem-solving.\n\nIn the beginning, learning HTML and CSS seemed manageable. But when I got to JavaScript, things started to get more challenging. There were moments when I felt overwhelmed, but I kept pushing through, one error message at a time.\n\nNow, looking back, I realize how much I’ve learned. Coding has taught me patience, resilience, and the importance of continuous learning. To all the aspiring developers out there: keep going! #WebDevelopment #CodingLife",
+      "author": "CodeNovice",
+      "created_at": "2024-06-20T13:20:00Z",
+      "updated_at": "2024-06-20T13:45:00Z",
+      "tags": [
+        "Coding",
+        "JavaScript",
+        "WebDev"
+      ],
+      "likes": 320,
+      "comments": [
+        {
+          "author": "ProCoder",
+          "text": "Way to go! 👏 Keep up the great work!"
+        },
+        {
+          "author": "DevGuru",
+          "text": "The journey is worth it. Keep pushing forward!"
+        }
+      ],
+      "language": "en",
+      "likesAuthorId": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Fin de semana en la montaña 🏞️",
+      "content": "Pasé un fin de semana increíble en la montaña. La vista era espectacular y el aire fresco fue un cambio bienvenido de la ciudad.\n\nComencé el viaje temprano en la mañana, cuando la niebla aún cubría las cimas. A medida que ascendíamos, el paisaje se volvía más impresionante. Sentir el viento en mi rostro y observar la naturaleza en su estado más puro fue revitalizante.\n\nRecomiendo a todos que, si tienen la oportunidad, pasen tiempo en la naturaleza. Es una experiencia que renueva el cuerpo y el alma. #Naturaleza #Viaje",
+      "author": "Aventurero",
+      "created_at": "2024-09-10T09:30:00Z",
+      "updated_at": "2024-09-10T10:00:00Z",
+      "tags": [
+        "Viaje",
+        "Aventura"
+      ],
+      "likes": 420,
+      "comments": [
+        {
+          "author": "AmanteMontañas",
+          "text": "¡Qué increíble! ¡Espero ver las fotos!"
+        },
+        {
+          "author": "ExploradorSam",
+          "text": "¡Las montañas también sont mi lugar feliz!"
+        }
+      ],
+      "language": "es",
+      "likesAuthorId": [
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "id": 4,
+      "title": "🍕 Soirée pizza maison !",
+      "content": "Ce soir, j'ai décidé de me lancer dans la confection de ma propre pizza. Il n'y a rien de plus satisfaisant que de préparer soi-même un plat délicieux. La recette est simple : commencez par mélanger de la farine, de la levure et de l'eau pour former la pâte. Laissez-la reposer pendant quelques heures pour qu'elle lève correctement. Ensuite, étalez-la sur une plaque de cuisson, ajoutez vos garnitures préférées – que ce soit des légumes frais, du fromage fondant ou des tranches de viande savoureuse – puis enfournez le tout. En quelques minutes, vous obtiendrez une pizza maison délicieuse et chaude. 😋 #CuisineMaison\n\nRien de mieux que de manger quelque chose que vous avez créé de vos propres mains. C’est simple, mais tellement gratifiant ! Si vous n'avez jamais essayé de faire une pizza maison, c'est le moment de le faire. Vous pouvez personnaliser chaque détail et obtenir exactement ce que vous aimez.",
+      "author": "ChefDuJour",
+      "created_at": "2024-10-01T17:30:00Z",
+      "updated_at": "2024-10-01T18:00:00Z",
+      "tags": [
+        "Cuisine",
+        "Recette"
+      ],
+      "likes": 135,
+      "comments": [
+        {
+          "author": "Gourmand",
+          "text": "Ça a l'air délicieux ! J'essaie ce week-end !"
+        },
+        {
+          "author": "Cuisinier",
+          "text": "Rien de mieux que la pizza maison 🍕"
+        }
+      ],
+      "language": "fr",
+      "likesAuthorId": [
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Reflexión sobre el crecimiento personal",
+      "content": "La vida siempre nos enseña lecciones importantes que, a menudo, no sabíamos que necesitábamos. A veces, el proceso de crecer y madurar puede parecer desafiante, lleno de momentos de duda y dificultad. Sin embargo, estos obstáculos son precisamente los que nos permiten aprender más sobre nosotros mismos y desarrollar una mayor resiliencia. Crecer no siempre es fácil, pero definitivamente siempre vale la pena. 🌱 #CrecimientoPersonal\n\nEn mi experiencia, el verdadero crecimiento personal llega cuando nos enfrentamos a nuestras inseguridades y decidimos ser mejores cada día. Es un viaje continuo, donde cada paso, por pequeño que sea, nos acerca más a la versión más fuerte y sabia de nosotros mismos.",
+      "author": "PensamientosProfundos",
+      "created_at": "2024-08-22T19:00:00Z",
+      "updated_at": "2024-08-22T19:30:00Z",
+      "tags": [
+        "Crecimiento",
+        "Inspiración"
+      ],
+      "likes": 210,
+      "comments": [
+        {
+          "author": "BuscadorDeSabiduría",
+          "text": "Gracias por compartir. El crecimiento es un viaje."
+        },
+        {
+          "author": "AlmaConsciente",
+          "text": "Hermosas reflexiones! 🌸"
+        }
+      ],
+      "language": "es",
+      "likesAuthorId": [
+        21,
+        22,
+        23,
+        24,
+        25
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Morning Yoga 🧘‍♀️",
+      "content": "There’s something incredibly peaceful about starting your day with a calm mind and a body that’s been stretched and awakened through yoga. It helps center your thoughts and prepares you mentally for whatever the day has in store. Whether you practice a few gentle stretches or a full flow session, the benefits are undeniable. Yoga isn’t just about physical flexibility, it’s about mental clarity and emotional balance. #YogaLife #Wellness\n\nThe peace that comes from yoga in the morning isn’t just about the exercises; it’s about taking a few moments to be present and breathe deeply, feeling your connection to yourself and the world around you. It’s a practice that stays with you all day long, helping you stay grounded and focused in even the most stressful situations.",
+      "author": "ZenLife",
+      "created_at": "2024-04-15T06:30:00Z",
+      "updated_at": "2024-04-15T06:45:00Z",
+      "tags": [
+        "Yoga",
+        "Health"
+      ],
+      "likes": 350,
+      "comments": [
+        {
+          "author": "PeacefulMind",
+          "text": "Yoga is the best way to start the day!"
+        },
+        {
+          "author": "HealthyLiving",
+          "text": "Inspiring! I’ll try this morning routine!"
+        }
+      ],
+      "language": "en",
+      "likesAuthorId": [
+        26,
+        27,
+        28,
+        29,
+        30
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Un dîner sous les étoiles 🌌",
+      "content": "Hier soir, j'ai eu la chance de vivre un moment magique en faisant un pique-nique sous les étoiles. Le ciel nocturne était d'une beauté à couper le souffle, et la simplicité de la situation ajoutait à l'enchantement de l'expérience. Nous étions juste quelques amis, entourés par la nature, partageant des rires et des conversations. 🌠 #Nature #MomentsPrécieux\n\nC'était un moment parfait pour se détacher des préoccupations quotidiennes et simplement se connecter à l'univers. Il n'y a rien de tel que de regarder les étoiles scintiller, respirer l'air frais de la nuit et apprécier la beauté de la nature qui nous entoure.",
+      "author": "Rêveuse",
+      "created_at": "2024-07-29T20:00:00Z",
+      "updated_at": "2024-07-29T20:45:00Z",
+      "tags": [
+        "Nature",
+        "Inspiration"
+      ],
+      "likes": 290,
+      "comments": [
+        {
+          "author": "AmoureuxDuCiel",
+          "text": "Ça devait être magnifique !"
+        },
+        {
+          "author": "ÉtoilesFan",
+          "text": "Rien de tel qu’un ciel étoilé pour se ressourcer."
+        }
+      ],
+      "language": "fr",
+      "likesAuthorId": [
+        31,
+        32,
+        33,
+        34,
+        35
+      ]
+    },
+    {
+      "id": 8,
+      "title": "🌟 Gesunde Ernährung Tipps",
+      "content": "Für eine ausgewogene und gesunde Ernährung ist es wichtig, den Tag richtig zu beginnen. Ein nahrhaftes Frühstück ist der perfekte Start, um dem Körper die nötige Energie für den Tag zu geben. Beginne deinen Morgen mit gesunden Lebensmitteln wie Haferflocken, frischem Obst oder Nüssen. Diese bieten dir wichtige Nährstoffe, die du für den ganzen Tag benötigst. 🥑 #Gesundheit\n\nVergiss nicht, dass eine ausgewogene Ernährung nicht nur gut für den Körper ist, sondern auch das allgemeine Wohlbefinden fördert. Wenn du dich gut ernährst, hast du mehr Energie, fühlst dich fitter und bist besser in der Lage, deine täglichen Aufgaben mit Leichtigkeit zu bewältigen.",
+      "author": "FitFreak",
+      "created_at": "2024-02-18T07:00:00Z",
+      "updated_at": "2024-02-18T07:15:00Z",
+      "tags": [
+        "Gesundheit",
+        "Ernährung"
+      ],
+      "likes": 100,
+      "comments": [
+        {
+          "author": "HealthLover",
+          "text": "Danke für den Tipp!"
+        },
+        {
+          "author": "FitnessFan",
+          "text": "Werde ich auf jeden Fall ausprobieren!"
+        }
+      ],
+      "language": "de",
+      "likesAuthorId": [
+        36,
+        37,
+        38,
+        39,
+        40
+      ]
+    },
+    {
+      "id": 9,
+      "title": "New Guitar 🎸",
+      "content": "I finally got my dream guitar, and I couldn’t be more excited! There’s something magical about the feel of a new guitar in your hands – the smooth fretboard, the perfect pitch, and the endless possibilities of what you can play with it. I can’t wait to start jamming with it and creating some awesome music. #MusicLover #Guitarist\n\nThis guitar is not just an instrument, it’s a tool for self-expression. I’ve always wanted one like this, and now that I have it, I’m looking forward to exploring new melodies, learning new songs, and making music that resonates with me. The journey of playing an instrument is a beautiful one, filled with growth, challenges, and rewards.",
+      "author": "RockStar",
+      "created_at": "2024-06-30T15:30:00Z",
+      "updated_at": "2024-06-30T16:00:00Z",
+      "tags": [
+        "Music",
+        "Guitar"
+      ],
+      "likes": 475,
+      "comments": [
+        {
+          "author": "MusicFan",
+          "text": "Can’t wait to hear you play!"
+        },
+        {
+          "author": "GuitarLover",
+          "text": "That’s a beauty! Congrats!"
+        }
+      ],
+      "language": "en",
+      "likesAuthorId": [
+        41,
+        42,
+        43,
+        44,
+        45
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Un week-end à la montagne 🏞️",
+      "content": "Ce week-end, j'ai décidé de prendre un peu de recul et de m'évader en montagne. Il n'y a rien de plus rafraîchissant que de s'éloigner de la vie urbaine et de se reconnecter à la nature. Les montagnes offrent un calme et une sérénité que l'on trouve rarement ailleurs. Entre randonnées et moments de détente, j'ai passé un moment merveilleux. ⛰️ #Nature #Évasion\n\nJe me suis réveillé tôt pour profiter de l'air frais du matin, de l'odeur des pins et de la vue imprenable sur les sommets enneigés. C’est incroyable de voir à quel point ces moments de solitude dans la nature peuvent être régénérateurs. Si vous avez la chance de pouvoir vous échapper, même pour un court week-end, je vous encourage à le faire !",
+      "author": "VoyageurSerein",
+      "created_at": "2024-09-12T18:45:00Z",
+      "updated_at": "2024-09-12T19:15:00Z",
+      "tags": [
+        "Voyage",
+        "Montagne"
+      ],
+      "likes": 180,
+      "comments": [
+        {
+          "author": "Aventurier",
+          "text": "J'adore la montagne aussi ! C'est un endroit parfait pour décompresser."
+        },
+        {
+          "author": "Randonneur",
+          "text": "Les randonnées en montagne sont les meilleures ! 🙌"
+        }
+      ],
+      "language": "fr",
+      "likesAuthorId": [
+        46,
+        47,
+        48,
+        49,
+        50
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Mindful Meditation 🧘‍♂️",
+      "content": "In today’s fast-paced world, it’s easy to get caught up in the whirlwind of daily tasks and responsibilities. Mindful meditation offers a peaceful retreat from all of that. By focusing on the present moment and letting go of distractions, meditation can help clear your mind and restore your inner calm. Whether it’s five minutes or an hour, the benefits of meditation are profound. #Mindfulness #MentalHealth\n\nThe most important part of meditation is to be kind to yourself. It’s okay if your mind wanders – just gently bring it back to the present. With consistent practice, you’ll notice improvements in your mental clarity, emotional balance, and overall well-being. Meditation isn’t just about quieting the mind; it’s about accepting what’s happening and learning to be present with it.",
+      "author": "PeaceSeeker",
+      "created_at": "2024-03-22T07:00:00Z",
+      "updated_at": "2024-03-22T07:30:00Z",
+      "tags": [
+        "Mindfulness",
+        "Meditation"
+      ],
+      "likes": 320,
+      "comments": [
+        {
+          "author": "CalmMind",
+          "text": "I’ve been trying to meditate daily. It’s so grounding."
+        },
+        {
+          "author": "SerenityNow",
+          "text": "Mindful meditation is a game-changer. Highly recommend!"
+        }
+      ],
+      "language": "en",
+      "likesAuthorId": [
+        51,
+        52,
+        53,
+        54,
+        55
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Le pouvoir de la lecture 📚",
+      "content": "Lire un bon livre peut transporter notre esprit dans des mondes lointains, offrir de nouvelles perspectives et nous ouvrir à des idées que nous n'avions jamais envisagées auparavant. Que ce soit un roman captivant, un essai stimulant ou une biographie inspirante, la lecture enrichit notre vie de manière inestimable. 📖 #Lecture #DéveloppementPersonnel\n\nJe me suis récemment plongé dans un livre qui m'a fait réfléchir profondément sur la manière dont nous voyons le monde. La lecture ne se limite pas seulement à l'acquisition de connaissances, c’est aussi une manière de s'évader, de se détendre et de se reconnecter à soi-même. Chaque livre est une aventure en soi, un moyen d'explorer l'imaginaire et de grandir intellectuellement.",
+      "author": "Bibliophile",
+      "created_at": "2024-05-10T14:30:00Z",
+      "updated_at": "2024-05-10T14:45:00Z",
+      "tags": [
+        "Livres",
+        "Culture"
+      ],
+      "likes": 410,
+      "comments": [
+        {
+          "author": "LecteurAssidu",
+          "text": "La lecture a vraiment changé ma vie. C’est une source de sagesse infinie."
+        },
+        {
+          "author": "PassionnéDeLivres",
+          "text": "Quels sont tes livres préférés ? Je suis toujours à la recherche de nouvelles lectures."
+        }
+      ],
+      "language": "fr",
+      "likesAuthorId": [
+        56,
+        57,
+        58,
+        59,
+        60
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Creative Photography 📸",
+      "content": "Photography is an art that allows us to capture fleeting moments and transform them into lasting memories. Whether it's the vibrant colors of a sunset, the emotions of a candid moment, or the details of a beautiful landscape, photography allows us to see the world in a different light. It's a creative outlet, a way to express oneself and share a perspective that others might not see. #Photography #Art\n\nI’ve been experimenting with different techniques lately – playing with light, angles, and perspectives to create more dynamic and meaningful images. The process of capturing something beautiful through a lens is incredibly satisfying, and every photo tells a story. Photography isn’t just about taking pictures; it’s about communicating feelings, thoughts, and ideas through the lens.",
+      "author": "LensMaster",
+      "created_at": "2024-01-25T09:00:00Z",
+      "updated_at": "2024-01-25T09:30:00Z",
+      "tags": [
+        "Photography",
+        "Art"
+      ],
+      "likes": 250,
+      "comments": [
+        {
+          "author": "PhotoLover",
+          "text": "I love photography too! It’s such a powerful way to express creativity."
+        },
+        {
+          "author": "ShutterBug",
+          "text": "What camera do you use? I’m looking to upgrade mine!"
+        }
+      ],
+      "language": "en",
+      "likesAuthorId": [
+        61,
+        62,
+        63,
+        64,
+        65
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Un après-midi à la plage 🌊",
+      "content": "Quoi de mieux qu'un après-midi tranquille à la plage ? L'air salin, le bruit des vagues et la chaleur du soleil sur la peau... C'est un véritable moment de détente et de ressourcement. Après quelques heures de baignade et de promenade, j’ai pris le temps de m'allonger sur le sable et de profiter de l'instant. Le temps semble s'arrêter, et tous les soucis du quotidien s'éloignent. 🌅 #Plage #Relaxation\n\nCes moments de simplicité sont souvent les plus précieux. Passer du temps à la plage me rappelle qu'il est important de s'arrêter parfois et de profiter de la beauté qui nous entoure. Il n'y a pas besoin de grand-chose pour être heureux, juste un peu de temps pour soi et la nature.",
+      "author": "Soleil",
+      "created_at": "2024-07-05T13:30:00Z",
+      "updated_at": "2024-07-05T14:00:00Z",
+      "tags": [
+        "Plage",
+        "Détente"
+      ],
+      "likes": 180,
+      "comments": [
+        {
+          "author": "AmoureuxDeLaMer",
+          "text": "La plage, c’est le bonheur pur !"
+        },
+        {
+          "author": "Vacancier",
+          "text": "J’ai hâte de retourner à la mer cet été."
+        }
+      ],
+      "language": "fr",
+      "likesAuthorId": [
+        66,
+        67,
+        68,
+        69,
+        70
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Exploring Urban Art 🎨",
+      "content": "Urban art is more than just graffiti; it’s an expressive movement that transforms city landscapes into vibrant galleries. From murals that tell stories to street installations that challenge perceptions, urban art reflects the culture, struggles, and aspirations of the people who live in those spaces. Every street corner holds a potential masterpiece waiting to be discovered. #UrbanArt #StreetArt\n\nDuring a recent walk through the city, I stumbled upon an alley covered in a beautiful mural. It was a stunning representation of resilience, and I couldn’t help but stop and take in the details. I believe urban art has the power to transform not only a space but also the people who experience it. If you haven’t explored your city's street art scene, I highly recommend it!",
+      "author": "ArtLover",
+      "created_at": "2024-02-15T16:00:00Z",
+      "updated_at": "2024-02-15T16:30:00Z",
+      "tags": [
+        "Art",
+        "UrbanCulture"
+      ],
+      "likes": 320,
+      "comments": [
+        {
+          "author": "GraffitiFan",
+          "text": "Urban art is a form of self-expression like no other! I love how it gives life to the streets."
+        },
+        {
+          "author": "ArtCritic",
+          "text": "Some street art is truly thought-provoking. It’s amazing how art can pop up in unexpected places."
+        }
+      ],
+      "language": "en",
+      "likesAuthorId": [
+        71,
+        72,
+        73,
+        74,
+        75
+      ]
+    },
+    {
+      "id": 16,
+      "title": "L'importance du sommeil 💤",
+      "content": "On underestimate the power of a good night’s sleep, but it is essential for both mental and physical health. When we sleep, our bodies repair and regenerate, our brains process emotions and memories, and our energy is replenished. Sleep is the foundation for a healthy life. #Health #Sleep\n\nI’ve recently adopted a more consistent sleep schedule, and the benefits are undeniable. I feel more energized throughout the day, my focus has improved, and my mood is more balanced. If you're struggling with sleep, I encourage you to try setting a bedtime routine, avoiding screens before bed, and creating a calming environment. It’s a simple but powerful way to prioritize your well-being.",
+      "author": "WellnessAdvocate",
+      "created_at": "2024-06-18T22:00:00Z",
+      "updated_at": "2024-06-18T22:30:00Z",
+      "tags": [
+        "Health",
+        "Wellness"
+      ],
+      "likes": 220,
+      "comments": [
+        {
+          "author": "SleepChampion",
+          "text": "I’ve noticed such a difference since I started prioritizing sleep! It’s a game-changer."
+        },
+        {
+          "author": "NightOwl",
+          "text": "I still struggle with getting enough sleep, but I’m working on it. Thanks for the tips!"
+        }
+      ],
+      "language": "fr",
+      "likesAuthorId": [
+        76,
+        77,
+        78,
+        79,
+        80
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Cooking for the Soul 🍲",
+      "content": "Cooking is not just about nourishing the body, it’s about feeding the soul. The process of preparing a meal, from selecting ingredients to the final presentation, can be incredibly therapeutic. It’s a chance to get creative and share a piece of yourself with others. #Cooking #Food\n\nI spent the afternoon experimenting with a new recipe, and it turned out better than I could have hoped! The joy of cooking comes not only from the end result but also from the act of creating something with love and care. Whether it’s a simple dish or an elaborate feast, cooking connects us to our traditions and to each other. What’s your favorite recipe to make when you need a little comfort?",
+      "author": "ChefInTheMaking",
+      "created_at": "2024-08-07T12:00:00Z",
+      "updated_at": "2024-08-07T12:30:00Z",
+      "tags": [
+        "Cooking",
+        "Foodie"
+      ],
+      "likes": 400,
+      "comments": [
+        {
+          "author": "HomeCook",
+          "text": "Cooking for the soul is everything! I love making hearty stews when I’m feeling low."
+        },
+        {
+          "author": "FoodLover",
+          "text": "I made a new soup recipe recently. It’s the perfect comfort food!"
+        }
+      ],
+      "language": "en",
+      "likesAuthorId": [
+        81,
+        82,
+        83,
+        84,
+        85
+      ]
+    },
+    {
+      "id": 18,
+      "title": "La magie des films classiques 🎬",
+      "content": "Les films classiques ont un charme intemporel. Ils ont été créés dans un contexte différent, avec des techniques de narration et de production uniques, mais leur capacité à toucher le cœur des spectateurs est toujours aussi forte aujourd’hui. #FilmsClassiques #Cinéma\n\nJ’ai récemment revu un de mes films classiques préférés, et il m’a rappelé à quel point le cinéma d’antan était magique. Les films d’hier ont cette capacité à capturer des moments de pure émotion et à raconter des histoires d’une manière que beaucoup de films modernes n’arrivent pas à égaler. Que ce soit un film muet de Charlie Chaplin ou un chef-d'œuvre de Hitchcock, chaque film classique offre une fenêtre unique sur l’histoire du cinéma.",
+      "author": "Cinéphile",
+      "created_at": "2024-04-11T20:30:00Z",
+      "updated_at": "2024-04-11T21:00:00Z",
+      "tags": [
+        "Cinéma",
+        "Classiques"
+      ],
+      "likes": 150,
+      "comments": [
+        {
+          "author": "VintageLover",
+          "text": "Il n’y a rien de mieux que les films classiques ! Ils ont une magie que les films modernes ne peuvent pas reproduire."
+        },
+        {
+          "author": "MovieFan",
+          "text": "Je viens de revoir un film de Audrey Hepburn, c'est incroyable comme son charme reste intemporel."
+        }
+      ],
+      "language": "fr",
+      "likesAuthorId": [
+        86,
+        87,
+        88,
+        89,
+        90
+      ]
+    },
+    {
+      "id": 19,
+      "title": "Building Resilience in Tough Times 💪",
+      "content": "Life is full of challenges, but resilience is what allows us to bounce back. Building resilience is not about avoiding difficult situations, but rather about developing the strength to face them head-on. It’s about learning from setbacks, embracing change, and staying hopeful even when times are tough. #Resilience #MentalStrength\n\nDuring a particularly challenging period in my life, I realized that resilience doesn’t come from avoiding problems; it comes from embracing them. It’s about having the courage to keep going, even when things don’t go as planned. Each setback is an opportunity to grow stronger. Don’t be afraid to lean on others for support, and remember that it’s okay to take things one day at a time.",
+      "author": "StrengthWithin",
+      "created_at": "2024-10-02T15:00:00Z",
+      "updated_at": "2024-10-02T15:30:00Z",
+      "tags": [
+        "PersonalGrowth",
+        "Resilience"
+      ],
+      "likes": 510,
+      "comments": [
+        {
+          "author": "StrongerEveryDay",
+          "text": "Resilience is definitely something we build over time. It’s all about the mindset."
+        },
+        {
+          "author": "LifeWarrior",
+          "text": "I’ve learned to embrace challenges as opportunities. It’s a long road, but worth it!"
+        }
+      ],
+      "language": "en",
+      "likesAuthorId": [
+        91,
+        92,
+        93,
+        94,
+        95
+      ]
+    },
+    {
+      "id": 20,
+      "title": "现代科技的未来 🚀",
+      "content": "随着科技的不断进步，我们迎来了前所未有的时代。人工智能、量子计算以及生物技术正在改变我们的生活方式。我们未来会见证科技带来更深远的影响，甚至可能是我们从未想过的革命。#科技 #未来\n\n最近，我读了一篇关于量子计算的文章，讨论了它如何改变数据处理和人工智能的进展。这让我对未来充满了期待！随着科技的不断发展，我们的生活和工作方式将不断发生变化。你认为科技会如何塑造我们的未来？",
+      "author": "TechExplorer",
+      "created_at": "2024-09-25T09:30:00Z",
+      "updated_at": "2024-09-25T09:50:00Z",
+      "tags": [
+        "Technology",
+        "Future"
+      ],
+      "likes": 180,
+      "comments": [
+        {
+          "author": "QuantumFan",
+          "text": "量子计算真的是一个非常酷的领域！未来的科技发展确实令人期待。"
+        },
+        {
+          "author": "AIResearcher",
+          "text": "我认为人工智能将会是下一个大的突破，特别是在医疗领域。"
+        }
+      ],
+      "language": "zh",
+      "likesAuthorId": [
+        96,
+        97,
+        98,
+        99,
+        100
+      ]
+    },
+    {
+      "id": 21,
+      "title": "技術の未来 🚀",
+      "content": "テクノロジーの進歩は私たちの生活を大きく変えています。人工知能、量子コンピュータ、そしてバイオテクノロジーは、私たちの生活をより良く、効率的にしています。未来のテクノロジーはもっと驚くべきものになるでしょう。#テクノロジー #未来\n\n最近、量子コンピュータに関する記事を読みましたが、それがいかに情報処理や人工知能に革命をもたらすかについて話していました。将来、テクノロジーがどのように発展するのか、非常に楽しみです。みなさんは、テクノロジーの未来についてどのように考えていますか？",
+      "author": "TechGuru",
+      "created_at": "2024-10-05T14:20:00Z",
+      "updated_at": "2024-10-05T14:40:00Z",
+      "tags": [
+        "Technology",
+        "Innovation"
+      ],
+      "likes": 250,
+      "comments": [
+        {
+          "author": "FutureTech",
+          "text": "人工知能の進化に本当に驚かされています。未来に何が待っているか楽しみです！"
+        },
+        {
+          "author": "BioTech",
+          "text": "バイオテクノロジーの進歩が医療に革命をもたらすと信じています。"
+        }
+      ],
+      "language": "ja",
+      "likesAuthorId": [
+        101,
+        102,
+        103,
+        104,
+        105
+      ]
+    },
+    {
+      "id": 22,
+      "title": "கலை மற்றும் வரலாறு 🎨",
+      "content": "கலை என்பது சமுதாயத்தின் அடையாளங்களைக் காட்டும் ஒரு வகையான மொழி. அதன் மூலம் மக்கள் தங்கள் எண்ணங்களை, உணர்வுகளை, மற்றும் கலாசாரங்களை வெளிப்படுத்துகின்றனர். வரலாற்றின் முக்கியமான தருணங்களை கலை மூலம் பதிவு செய்யும் வாய்ப்பு எப்போதும் உள்ளது. #கலை #வரலாறு\n\nநான் சமீபத்தில் ஒரு புகழ்பெற்ற கலைஞரின் படைப்புகளைக் கண்டு ரசித்தேன். அது சரியான வழியில் இரு காலங்களில் உள்ள தருணங்களை வெளிப்படுத்தியது. கலை மற்றும் வரலாறு எப்போதும் ஒரே அணியில் இணைந்திருக்கும் என்பதில் எனக்கு பெரிதும் நம்பிக்கை உள்ளது.",
+      "author": "ArtHistorian",
+      "created_at": "2024-07-18T11:00:00Z",
+      "updated_at": "2024-07-18T11:20:00Z",
+      "tags": [
+        "Art",
+        "History"
+      ],
+      "likes": 140,
+      "comments": [
+        {
+          "author": "CultureLover",
+          "text": "கலை மற்றும் வரலாற்றின் இணைவுக்கு நான் மிக்க ரசனை. அந்த கலையை பார்க்கும் போது அதை உணர முடிகிறது."
+        },
+        {
+          "author": "ArtFan",
+          "text": "கலை மனிதர்களின் உணர்வுகளை மிகவும் வலுவாக வெளிப்படுத்தும்."
+        }
+      ],
+      "language": "ta",
+      "likesAuthorId": [
+        106,
+        107,
+        108,
+        109,
+        110
+      ]
+    },
+    {
+      "id": 23,
+      "title": "अच्छे मानसिक स्वास्थ्य के लिए टिप्स 🧘",
+      "content": "मानसिक स्वास्थ्य उतना ही महत्वपूर्ण है जितना शारीरिक स्वास्थ्य। हमें अपनी मानसिक स्थिति को स्थिर और सकारात्मक बनाए रखने के लिए कुछ सरल कदम उठाने चाहिए। ध्यान, योग, और अच्छी नींद के साथ मानसिक स्थिति को बेहतर किया जा सकता है। #MentalHealth #Wellness\n\nमैंने हाल ही में ध्यान करना शुरू किया और इसके फायदे मुझे बहुत अच्छे से महसूस हुए हैं। मेरा मन शांत रहता है और मुझे जीवन के प्रति एक सकारात्मक दृष्टिकोण मिला है। मानसिक स्वास्थ्य के लिए आप क्या करते हैं?",
+      "author": "MindfulnessCoach",
+      "created_at": "2024-05-10T18:00:00Z",
+      "updated_at": "2024-05-10T18:30:00Z",
+      "tags": [
+        "Health",
+        "MentalWellness"
+      ],
+      "likes": 320,
+      "comments": [
+        {
+          "author": "YogaLover",
+          "text": "ध्यान ने मेरी मानसिक स्थिति को बहुत बेहतर किया है। इसे अपनी दिनचर्या में जरूर शामिल करें!"
+        },
+        {
+          "author": "MindfulLiving",
+          "text": "मैंने भी मानसिक स्वास्थ्य के लिए ध्यान की शुरुआत की है और इसके लाभ मुझे मिल रहे हैं।"
+        }
+      ],
+      "language": "hi",
+      "likesAuthorId": [
+        111,
+        112,
+        113,
+        114,
+        115
+      ]
+    },
+    {
+      "id": 24,
+      "title": "Exploring Nature's Beauty 🌳",
+      "content": "Nature has a way of calming the mind and refreshing the soul. Whether it’s a quiet walk through the woods or a hike up a mountain, spending time in nature is a reminder of the beauty and simplicity of life. It’s the perfect escape from the hustle and bustle of daily life. #Nature #OutdoorAdventure\n\nI recently took a weekend trip to the mountains, and the experience was incredibly rejuvenating. The fresh air, the stunning views, and the peaceful surroundings helped me reconnect with myself. If you’re feeling stressed or overwhelmed, I highly recommend getting outside and immersing yourself in nature. It does wonders for the mind!",
+      "author": "NatureLover",
+      "created_at": "2024-11-05T08:00:00Z",
+      "updated_at": "2024-11-05T08:20:00Z",
+      "tags": [
+        "Nature",
+        "Adventure"
+      ],
+      "likes": 450,
+      "comments": [
+        {
+          "author": "WildernessExplorer",
+          "text": "I completely agree! Nature is such a healing force. A weekend getaway into nature always recharges me."
+        },
+        {
+          "author": "Hiker",
+          "text": "I love hiking and being surrounded by the beauty of nature. It’s the perfect stress reliever."
+        }
+      ],
+      "language": "en",
+      "likesAuthorId": [
+        116,
+        117,
+        118,
+        119,
+        120
+      ]
+    },
+    {
+      "id": 25,
+      "title": "未来科技的影响 🌐",
+      "content": "随着人工智能和机器人技术的发展，未来的工作方式将发生巨大变化。越来越多的行业将依赖于机器学习和自动化技术，从而提高生产力和效率。然而，这也可能对就业市场带来一定的挑战。#AI #科技\n\n我最近阅读了一篇关于未来人工智能应用的文章，讨论了它如何在医疗、教育等领域产生深远的影响。未来会有更多基于AI的创新，改变我们的工作和生活方式。",
+      "author": "TechVisionary",
+      "created_at": "2024-10-10T13:00:00Z",
+      "updated_at": "2024-10-10T13:30:00Z",
+      "tags": [
+        "Technology",
+        "AI"
+      ],
+      "likes": 220,
+      "comments": [
+        {
+          "author": "RobotGuru",
+          "text": "人工智能不仅会改变工作，还会改变人们的生活方式，真是太有意思了！"
+        },
+        {
+          "author": "TechExpert",
+          "text": "自动化技术正在迅速改变许多行业，未来我们可以预期更多的变革。"
+        }
+      ],
+      "language": "zh",
+      "likesAuthorId": [
+        121,
+        122,
+        123,
+        124,
+        125
+      ]
+    },
+    {
+      "id": 26,
+      "title": "テクノロジーの未来 🚀",
+      "content": "テクノロジーの進化は止まりません。新しい技術が次々と登場し、私たちの生活はどんどん便利になっています。今後、AI、ロボット技術、そして仮想現実の発展が注目されます。#テクノロジー #未来\n\n最近、AI技術を活用したアプリケーションについての記事を読みました。それがどのように私たちの日常に役立つかを示しており、非常に興味深いです。未来は確実にテクノロジーの力で変わることでしょう。",
+      "author": "InnovationExpert",
+      "created_at": "2024-10-15T17:40:00Z",
+      "updated_at": "2024-10-15T18:00:00Z",
+      "tags": [
+        "Technology",
+        "Future"
+      ],
+      "likes": 180,
+      "comments": [
+        {
+          "author": "AI Enthusiast",
+          "text": "AIの進化に伴い、私たちの仕事の仕方が大きく変わると思います。"
+        },
+        {
+          "author": "TechGeek",
+          "text": "仮想現実や拡張現実の進歩が楽しみです。新しい体験ができる時代がすぐそこに来ている!"
+        }
+      ],
+      "language": "ja",
+      "likesAuthorId": [
+        126,
+        127,
+        128,
+        129,
+        130
+      ]
+    },
+    {
+      "id": 27,
+      "title": "அறிவியல் மற்றும் தொழில்நுட்பம் 🧑‍💻",
+      "content": "அறிவியல் மற்றும் தொழில்நுட்பம் இன்று எங்கும் காணப்படும் வல்லமை பெற்ற துறைகளாக விளங்குகின்றன. இந்த துறைகள் உலகின் முன்னேற்றத்தில் முக்கிய பங்காற்றுகின்றன. அறிவியல் சாதனைகள் மருந்து, பொறியியல் மற்றும் உயிரியல் துறைகளில் புதிய முன்னேற்றங்களை உருவாக்குகின்றன. #அறிவியல் #தொழில்நுட்பம்\n\nஇந்த பகுதியில் நான் சமீபத்தில் படித்த ஒரு ஆராய்ச்சி பற்றி பகிர்ந்துகொள்கிறேன், இது உணவுத் தொழில்நுட்பத்தில் ஏற்பட்ட புதிய கண்டுபிடிப்புகளைக் காட்டுகிறது. இதன் மூலம் புதிய உணவு மற்றும் சுகாதார வழிமுறைகள் உருவாக்கப்படுகின்றன.",
+      "author": "TechScholar",
+      "created_at": "2024-08-12T09:20:00Z",
+      "updated_at": "2024-08-12T09:50:00Z",
+      "tags": [
+        "Science",
+        "Technology"
+      ],
+      "likes": 150,
+      "comments": [
+        {
+          "author": "BioInnovator",
+          "text": "அறிவியல் சாதனைகள் நம் சமுதாயத்தில் மிகப்பெரிய மாற்றங்களை ஏற்படுத்தும்."
+        },
+        {
+          "author": "TechResearcher",
+          "text": "நான் தொழில்நுட்ப வளர்ச்சியில் ஆர்வமாக இருக்கின்றேன், அதன் மூலம் உலகம் முழுவதும் பல புதிய கண்டுபிடிப்புகள் நடக்கின்றன."
+        }
+      ],
+      "language": "ta",
+      "likesAuthorId": [
+        131,
+        132,
+        133,
+        134,
+        135
+      ]
+    },
+    {
+      "id": 28,
+      "title": "मानसिक स्वास्थ्य के लिए स्वास्थवर्धक आदतें 🧘",
+      "content": "स्वस्थ मानसिक स्थिति के लिए शारीरिक और मानसिक स्वास्थ्य का संतुलन बनाए रखना महत्वपूर्ण है। नियमित व्यायाम, ध्यान, और सकारात्मक सोच जैसे आदतें मानसिक भलाइ के लिए लाभकारी हैं। यह हमें तनाव को कम करने और अपने जीवन को बेहतर बनाने में मदद करती हैं। #MentalWellness #HealthyHabits\n\nमैंने हाल ही में योग को अपनी दिनचर्या में शामिल किया है और यह मेरे मानसिक स्वास्थ्य के लिए बहुत फायदेमंद रहा है। यह मुझे शांति और एकाग्रता प्रदान करता है। आप मानसिक स्वास्थ्य को बनाए रखने के लिए क्या करते हैं?",
+      "author": "WellnessGuide",
+      "created_at": "2024-09-01T15:30:00Z",
+      "updated_at": "2024-09-01T16:00:00Z",
+      "tags": [
+        "Health",
+        "MentalWellness"
+      ],
+      "likes": 280,
+      "comments": [
+        {
+          "author": "StressFree",
+          "text": "ध्यान और योग ने मेरी मानसिक स्थिति को बहुत बेहतर किया है। मैं इसे अपनी दिनचर्या में जरूर शामिल करता हूँ।"
+        },
+        {
+          "author": "MindCalm",
+          "text": "मानसिक स्वास्थ्य को प्राथमिकता देना जरूरी है। हमें अपने मानसिक स्वास्थ्य के लिए भी समय देना चाहिए।"
+        }
+      ],
+      "language": "hi",
+      "likesAuthorId": [
+        136,
+        137,
+        138,
+        139,
+        140
+      ]
+    },
+    {
+      "id": 29,
+      "title": "Sustainability and Green Technologies 🌱",
+      "content": "The world is at a crucial point where sustainability must be at the forefront of technological innovations. From renewable energy to waste reduction and green manufacturing processes, sustainable practices are becoming the norm. Green technology is not just an option, it's a necessity. #Sustainability #GreenTech\n\nI recently read an inspiring article about how solar energy is becoming more affordable and accessible to individuals. This shift toward renewable energy could be a game-changer for reducing global carbon footprints. If we can continue to innovate, the future of our planet looks brighter.",
+      "author": "EcoInnovator",
+      "created_at": "2024-11-01T10:20:00Z",
+      "updated_at": "2024-11-01T10:40:00Z",
+      "tags": [
+        "Sustainability",
+        "Innovation"
+      ],
+      "likes": 400,
+      "comments": [
+        {
+          "author": "GreenGuru",
+          "text": "Solar power is the future! It's amazing to see how affordable and efficient renewable energy has become."
+        },
+        {
+          "author": "EcoWarrior",
+          "text": "Green technologies are the key to a sustainable future. We all need to contribute to this movement."
+        }
+      ],
+      "language": "en",
+      "likesAuthorId": [
+        141,
+        142,
+        143,
+        144,
+        145
+      ]
+    }
+  ]
 }
-  

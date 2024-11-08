@@ -18,6 +18,8 @@ import { ProfilComponent } from './components/profil/profil.component';
 import { ProfileInfoComponent } from './components/profile-info/profile-info.component';
 import { ConnectionHistoryComponent } from './components/connection-history/connection-history.component';
 import { AccountSettingsComponent } from './components/account-settings/account-settings.component';
+import { ArticleCommentComponent } from './components/article-comment/article-comment.component';
+import { ArticlePageComponent } from './components/article-page/article-page.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { AccountSettingsComponent } from './components/account-settings/account-
     ProfilComponent,
     ProfileInfoComponent,
     ConnectionHistoryComponent,
-    AccountSettingsComponent
+    AccountSettingsComponent,
+    ArticleCommentComponent,
+    ArticlePageComponent,
   ],
   imports: [
     BrowserAnimationsModule,

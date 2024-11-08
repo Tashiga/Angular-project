@@ -10,6 +10,8 @@ export interface Article {
     tags: string[];
     likes: number;
     comments: Comment[];
+    likesAuthorId: number[];
+    language: string;
   }
 
   export const ArticleInit : Article = {
@@ -22,4 +24,6 @@ export interface Article {
     tags: [],
     likes: 0,
     comments: [],
+    likesAuthorId: [],
+    language: ''
   };

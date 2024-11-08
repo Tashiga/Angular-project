@@ -7,6 +7,7 @@ import { SignupComponent } from './components/signup/signup.component';
 import { ArticleFormComponent } from './components/article-form/article-form.component';
 import { ArticlesComponent } from './components/articles/articles.component';
 import { ProfilComponent } from './components/profil/profil.component';
+import { ArticlePageComponent } from './components/article-page/article-page.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -15,7 +16,9 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent },
   { path: 'new-article', component: ArticleFormComponent },
   { path: 'articles', component: ArticlesComponent },
+  { path: 'article/:id', component: ArticlePageComponent },
   { path: 'profile', component: ProfilComponent },
+  { path: 'user-profile/:username', component: ArticlePageComponent },
   { path: '**', component: ErrorPageComponent }
 ];
 
