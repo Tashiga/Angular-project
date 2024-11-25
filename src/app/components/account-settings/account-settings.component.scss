@@ -3,40 +3,99 @@ h2, .account-settings-form h3 {
     text-align: center;
 }
 
-.account-settings-form {
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    gap: 15px;
-}
+    align-items: center;
+  }
 
-.account-settings-form label {
-    font-size: 0.9em;
-    color: #555555;
-}
-
-.account-settings-form input[type="text"],
-.account-settings-form input[type="password"] {
-    padding: 10px;
-    font-size: 1em;
-    border: 1px solid #dddddd;
-    border-radius: 5px;
-}
-
-.account-settings-form input[type="checkbox"] {
-    margin-right: 10px;
-}
-
-.account-settings-form button {
-    padding: 10px;
-    font-size: 1em;
-    color: #ffffff;
-    background-color: #0073e6;
-    border: none;
-    border-radius: 5px;
+  label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    color: #333;
+    width: 80%;
+    font-size: 14px;
+  }
+  
+  label input[type="checkbox"] {
+    margin-left: 20px;
+    transform: scale(1.2);
     cursor: pointer;
-    transition: background-color 0.3s;
-}
+  }
 
-.account-settings-form button:hover {
-    background-color: #005bb5;
-}
+  label select {
+    margin-left: 10px; 
+    margin-right: 10px;
+    flex-grow: 1;
+    width: 30%;
+  }
+
+  select {
+    width: 100%;
+    max-width: 300px;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    outline: none;
+    margin-bottom: 15px;
+  }
+
+  select:focus {
+    border-color: #007bff;
+  }
+  
+  button {
+    width: 35%;
+    max-width: 300px;
+    padding: 10px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .error-message {
+    color: #d9534f;
+    font-size: 12px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+  
+  /* Style mobile (responsive) */
+  @media (max-width: 480px) {
+    form {
+      padding: 15px;
+      font-size: 14px;
+    }
+  
+    button {
+      padding: 8px;
+      font-size: 14px;
+    }
+  }
+  

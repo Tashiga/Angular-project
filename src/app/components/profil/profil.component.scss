@@ -48,7 +48,7 @@ body {
 //
 .profile-container {
     display: flex;
-    flex-wrap: wrap; /* Permet d'aller sur une nouvelle ligne si la largeur est dépassée */
+    flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
 }
@@ -56,10 +56,13 @@ body {
 .profile-card,
 .connections-section,
 .account-settings-section {
-    flex: 1 1 300px; /* Largeur minimum de chaque section pour s'adapter à l'écran */
+    flex: 1 1 300px; 
     max-width: 400px;
 }
 
+.logout:hover{
+    cursor: pointer;
+}
   
 
   

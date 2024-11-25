@@ -25,19 +25,23 @@ export class ProfilComponent implements OnInit {
     });
     this.authService.userInfo$.subscribe((user) => {
       this.user = user;
+      if(!user.settings){
+        this.user.settings = {
+          emailNotifications: false,
+          smsNotifications: false,
+          translationLanguage: 'fr'
+        };
+      }
     })
-    console.log("checkLoggedStatus : ", this.isLoggedIn);
-    console.log("checkuserInfos : ", this.user);
   }
 
   startEditing(field: string): void {
-    if (field === 'username') {
+    if (field === 'username')
       this.isEditingUsername = true;
-    } else if (field === 'email') {
+    else if (field === 'email') 
       this.isEditingEmail = true;
-    } else if (field === 'bio') {
+    else if (field === 'bio') 
       this.isEditingBio = true;
-    }
     this.showUpdateButton = true;
   }
 
@@ -46,8 +50,6 @@ export class ProfilComponent implements OnInit {
     this.isEditingEmail = false;
     this.isEditingBio = false;
     this.showUpdateButton = false;
-
-    console.log('Updated user data:', this.user);
   }
 
   cancelEditing(): void {

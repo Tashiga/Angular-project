@@ -1,13 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, map, Observable } from 'rxjs';
-import { User } from '../models/user.model';
+import { BehaviorSubject, map, Observable, switchMap } from 'rxjs';
+import { User, UserSettings } from '../models/user.model';
 import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+  private apiUrl = 'http://localhost:3000/users';
   private isLoggedSubject: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
   private userInfoSubject: BehaviorSubject<User> = new BehaviorSubject<User>({
     id: 0,
@@ -25,14 +26,13 @@ export class AuthService {
     if (storedIsLogged === 'true') {
       this.isLoggedSubject.next(true);
       const storedUserInfo = localStorage.getItem('userInfo');
-      if (storedUserInfo) {
+      if (storedUserInfo) 
         this.userInfoSubject.next(JSON.parse(storedUserInfo));
-      }
     }
   }
 
   login(email: string, password: string) : Observable<boolean> {
-    return this.http.get<any[]>(`http://localhost:3000/users?email=${email}&password=${password}`)
+    return this.http.get<any[]>(`${this.apiUrl}?email=${email}&password=${password}`)
     .pipe(map((users: any) => {
       if (users.length > 0) {
         this.isLoggedSubject.next(true);
@@ -57,7 +57,7 @@ export class AuthService {
   }
 
   private getUserInfos(email: string) {
-    this.http.get<any[]>(`http://localhost:3000/users?email=${email}`)
+    this.http.get<any[]>(`${this.apiUrl}?email=${email}`)
     .subscribe((user: any) => {
       if(user && user.length > 0 && user[0]){
         let userInfos : User = {
@@ -74,5 +74,19 @@ export class AuthService {
     })
   }
 
+ updateUserSettings(userId: number, settings: UserSettings): Observable<User> {
+  return this.userInfo$.pipe(
+    switchMap(user => {
+      user.settings = settings;
+      return this.http.put<User>(`${this.apiUrl}/${userId}`, user).pipe(
+        map(updatedUser => {
+          this.userInfoSubject.next(updatedUser);
+          localStorage.setItem('userInfo', JSON.stringify(updatedUser));
+          return updatedUser;
+        })
+      );
+    })
+  );
+  }
 
 }

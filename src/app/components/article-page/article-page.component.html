@@ -2,6 +2,7 @@
 
     <div class="button-container">
         <button [routerLink]="['/articles']">Retour à la liste des articles</button>
+        <button (click)="translate()">Traduire l'article</button>
     </div>
     <div class="article-header">
       <h1 class="article-title">{{ article.title }}</h1>

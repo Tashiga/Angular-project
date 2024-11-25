@@ -1,16 +1,20 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "username": "alice",
       "email": "alice@example.com",
-      "password": "hashedpassword1",
       "created_at": "2024-01-01T10:00:00Z",
       "bio": "A passionate blogger about tech and lifestyle.",
-      "avatar_url": "https://pub-static.fotor.com/assets/projects/pages/d5bdd0513a0740a8a38752dbc32586d0/fotor-03d1a91a0cec4542927f53c87e0599f6.jpg"
+      "avatar_url": "https://pub-static.fotor.com/assets/projects/pages/d5bdd0513a0740a8a38752dbc32586d0/fotor-03d1a91a0cec4542927f53c87e0599f6.jpg",
+      "settings": {
+        "emailNotifications": true,
+        "smsNotifications": false,
+        "translationLanguage": "ta"
+      }
     },
     {
-      "id": 2,
+      "id": "2",
       "username": "bob",
       "email": "bob@example.com",
       "password": "hashedpassword2",
@@ -19,7 +23,7 @@
       "avatar_url": "https://img.freepik.com/vecteurs-premium/jeune-homme-visage-avatar-vecteur-illustration-conception_968209-16.jpg"
     },
     {
-      "id": 3,
+      "id": "3",
       "username": "charlie",
       "email": "charlie@example.com",
       "password": "hashedpassword3",
@@ -30,7 +34,7 @@
   ],
   "articles": [
     {
-      "id": 1,
+      "id": "1",
       "title": "🌍 Adopter un mode de vie durable",
       "content": "Aujourd'hui, j'ai décidé de réduire mon utilisation de plastique. 🌱 Chaque petit geste compte et peut faire une grande différence dans la lutte pour préserver notre planète.\n\nLes statistiques montrent que si chacun de nous adopte des habitudes plus respectueuses de l'environnement, nous pourrions avoir un impact considérable. En commençant par des actions simples, comme refuser les sacs en plastique et utiliser des contenants réutilisables, nous pouvons inspirer les autres à faire de même.\n\nLa route vers un mode de vie zéro déchet est longue, mais chaque étape est gratifiante. Et vous, quels petits gestes faites-vous pour protéger la planète ? #Écologie #ZéroDéchet",
       "author": "GreenQueen",
@@ -61,7 +65,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "My Coding Journey",
       "content": "After 6 months of studying, I can finally build my own websites! 🎉 It's been a tough but rewarding journey, filled with countless hours of coding and problem-solving.\n\nIn the beginning, learning HTML and CSS seemed manageable. But when I got to JavaScript, things started to get more challenging. There were moments when I felt overwhelmed, but I kept pushing through, one error message at a time.\n\nNow, looking back, I realize how much I’ve learned. Coding has taught me patience, resilience, and the importance of continuous learning. To all the aspiring developers out there: keep going! #WebDevelopment #CodingLife",
       "author": "CodeNovice",
@@ -93,7 +97,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Fin de semana en la montaña 🏞️",
       "content": "Pasé un fin de semana increíble en la montaña. La vista era espectacular y el aire fresco fue un cambio bienvenido de la ciudad.\n\nComencé el viaje temprano en la mañana, cuando la niebla aún cubría las cimas. A medida que ascendíamos, el paisaje se volvía más impresionante. Sentir el viento en mi rostro y observar la naturaleza en su estado más puro fue revitalizante.\n\nRecomiendo a todos que, si tienen la oportunidad, pasen tiempo en la naturaleza. Es una experiencia que renueva el cuerpo y el alma. #Naturaleza #Viaje",
       "author": "Aventurero",
@@ -124,7 +128,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "🍕 Soirée pizza maison !",
       "content": "Ce soir, j'ai décidé de me lancer dans la confection de ma propre pizza. Il n'y a rien de plus satisfaisant que de préparer soi-même un plat délicieux. La recette est simple : commencez par mélanger de la farine, de la levure et de l'eau pour former la pâte. Laissez-la reposer pendant quelques heures pour qu'elle lève correctement. Ensuite, étalez-la sur une plaque de cuisson, ajoutez vos garnitures préférées – que ce soit des légumes frais, du fromage fondant ou des tranches de viande savoureuse – puis enfournez le tout. En quelques minutes, vous obtiendrez une pizza maison délicieuse et chaude. 😋 #CuisineMaison\n\nRien de mieux que de manger quelque chose que vous avez créé de vos propres mains. C’est simple, mais tellement gratifiant ! Si vous n'avez jamais essayé de faire une pizza maison, c'est le moment de le faire. Vous pouvez personnaliser chaque détail et obtenir exactement ce que vous aimez.",
       "author": "ChefDuJour",
@@ -155,7 +159,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Reflexión sobre el crecimiento personal",
       "content": "La vida siempre nos enseña lecciones importantes que, a menudo, no sabíamos que necesitábamos. A veces, el proceso de crecer y madurar puede parecer desafiante, lleno de momentos de duda y dificultad. Sin embargo, estos obstáculos son precisamente los que nos permiten aprender más sobre nosotros mismos y desarrollar una mayor resiliencia. Crecer no siempre es fácil, pero definitivamente siempre vale la pena. 🌱 #CrecimientoPersonal\n\nEn mi experiencia, el verdadero crecimiento personal llega cuando nos enfrentamos a nuestras inseguridades y decidimos ser mejores cada día. Es un viaje continuo, donde cada paso, por pequeño que sea, nos acerca más a la versión más fuerte y sabia de nosotros mismos.",
       "author": "PensamientosProfundos",
@@ -186,7 +190,7 @@
       ]
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "Morning Yoga 🧘‍♀️",
       "content": "There’s something incredibly peaceful about starting your day with a calm mind and a body that’s been stretched and awakened through yoga. It helps center your thoughts and prepares you mentally for whatever the day has in store. Whether you practice a few gentle stretches or a full flow session, the benefits are undeniable. Yoga isn’t just about physical flexibility, it’s about mental clarity and emotional balance. #YogaLife #Wellness\n\nThe peace that comes from yoga in the morning isn’t just about the exercises; it’s about taking a few moments to be present and breathe deeply, feeling your connection to yourself and the world around you. It’s a practice that stays with you all day long, helping you stay grounded and focused in even the most stressful situations.",
       "author": "ZenLife",
@@ -217,7 +221,7 @@
       ]
     },
     {
-      "id": 7,
+      "id": "7",
       "title": "Un dîner sous les étoiles 🌌",
       "content": "Hier soir, j'ai eu la chance de vivre un moment magique en faisant un pique-nique sous les étoiles. Le ciel nocturne était d'une beauté à couper le souffle, et la simplicité de la situation ajoutait à l'enchantement de l'expérience. Nous étions juste quelques amis, entourés par la nature, partageant des rires et des conversations. 🌠 #Nature #MomentsPrécieux\n\nC'était un moment parfait pour se détacher des préoccupations quotidiennes et simplement se connecter à l'univers. Il n'y a rien de tel que de regarder les étoiles scintiller, respirer l'air frais de la nuit et apprécier la beauté de la nature qui nous entoure.",
       "author": "Rêveuse",
@@ -248,7 +252,7 @@
       ]
     },
     {
-      "id": 8,
+      "id": "8",
       "title": "🌟 Gesunde Ernährung Tipps",
       "content": "Für eine ausgewogene und gesunde Ernährung ist es wichtig, den Tag richtig zu beginnen. Ein nahrhaftes Frühstück ist der perfekte Start, um dem Körper die nötige Energie für den Tag zu geben. Beginne deinen Morgen mit gesunden Lebensmitteln wie Haferflocken, frischem Obst oder Nüssen. Diese bieten dir wichtige Nährstoffe, die du für den ganzen Tag benötigst. 🥑 #Gesundheit\n\nVergiss nicht, dass eine ausgewogene Ernährung nicht nur gut für den Körper ist, sondern auch das allgemeine Wohlbefinden fördert. Wenn du dich gut ernährst, hast du mehr Energie, fühlst dich fitter und bist besser in der Lage, deine täglichen Aufgaben mit Leichtigkeit zu bewältigen.",
       "author": "FitFreak",
@@ -279,7 +283,7 @@
       ]
     },
     {
-      "id": 9,
+      "id": "9",
       "title": "New Guitar 🎸",
       "content": "I finally got my dream guitar, and I couldn’t be more excited! There’s something magical about the feel of a new guitar in your hands – the smooth fretboard, the perfect pitch, and the endless possibilities of what you can play with it. I can’t wait to start jamming with it and creating some awesome music. #MusicLover #Guitarist\n\nThis guitar is not just an instrument, it’s a tool for self-expression. I’ve always wanted one like this, and now that I have it, I’m looking forward to exploring new melodies, learning new songs, and making music that resonates with me. The journey of playing an instrument is a beautiful one, filled with growth, challenges, and rewards.",
       "author": "RockStar",
@@ -310,7 +314,7 @@
       ]
     },
     {
-      "id": 10,
+      "id": "10",
       "title": "Un week-end à la montagne 🏞️",
       "content": "Ce week-end, j'ai décidé de prendre un peu de recul et de m'évader en montagne. Il n'y a rien de plus rafraîchissant que de s'éloigner de la vie urbaine et de se reconnecter à la nature. Les montagnes offrent un calme et une sérénité que l'on trouve rarement ailleurs. Entre randonnées et moments de détente, j'ai passé un moment merveilleux. ⛰️ #Nature #Évasion\n\nJe me suis réveillé tôt pour profiter de l'air frais du matin, de l'odeur des pins et de la vue imprenable sur les sommets enneigés. C’est incroyable de voir à quel point ces moments de solitude dans la nature peuvent être régénérateurs. Si vous avez la chance de pouvoir vous échapper, même pour un court week-end, je vous encourage à le faire !",
       "author": "VoyageurSerein",
@@ -341,7 +345,7 @@
       ]
     },
     {
-      "id": 11,
+      "id": "11",
       "title": "Mindful Meditation 🧘‍♂️",
       "content": "In today’s fast-paced world, it’s easy to get caught up in the whirlwind of daily tasks and responsibilities. Mindful meditation offers a peaceful retreat from all of that. By focusing on the present moment and letting go of distractions, meditation can help clear your mind and restore your inner calm. Whether it’s five minutes or an hour, the benefits of meditation are profound. #Mindfulness #MentalHealth\n\nThe most important part of meditation is to be kind to yourself. It’s okay if your mind wanders – just gently bring it back to the present. With consistent practice, you’ll notice improvements in your mental clarity, emotional balance, and overall well-being. Meditation isn’t just about quieting the mind; it’s about accepting what’s happening and learning to be present with it.",
       "author": "PeaceSeeker",
@@ -372,7 +376,7 @@
       ]
     },
     {
-      "id": 12,
+      "id": "12",
       "title": "Le pouvoir de la lecture 📚",
       "content": "Lire un bon livre peut transporter notre esprit dans des mondes lointains, offrir de nouvelles perspectives et nous ouvrir à des idées que nous n'avions jamais envisagées auparavant. Que ce soit un roman captivant, un essai stimulant ou une biographie inspirante, la lecture enrichit notre vie de manière inestimable. 📖 #Lecture #DéveloppementPersonnel\n\nJe me suis récemment plongé dans un livre qui m'a fait réfléchir profondément sur la manière dont nous voyons le monde. La lecture ne se limite pas seulement à l'acquisition de connaissances, c’est aussi une manière de s'évader, de se détendre et de se reconnecter à soi-même. Chaque livre est une aventure en soi, un moyen d'explorer l'imaginaire et de grandir intellectuellement.",
       "author": "Bibliophile",
@@ -403,7 +407,7 @@
       ]
     },
     {
-      "id": 13,
+      "id": "13",
       "title": "Creative Photography 📸",
       "content": "Photography is an art that allows us to capture fleeting moments and transform them into lasting memories. Whether it's the vibrant colors of a sunset, the emotions of a candid moment, or the details of a beautiful landscape, photography allows us to see the world in a different light. It's a creative outlet, a way to express oneself and share a perspective that others might not see. #Photography #Art\n\nI’ve been experimenting with different techniques lately – playing with light, angles, and perspectives to create more dynamic and meaningful images. The process of capturing something beautiful through a lens is incredibly satisfying, and every photo tells a story. Photography isn’t just about taking pictures; it’s about communicating feelings, thoughts, and ideas through the lens.",
       "author": "LensMaster",
@@ -434,7 +438,7 @@
       ]
     },
     {
-      "id": 14,
+      "id": "14",
       "title": "Un après-midi à la plage 🌊",
       "content": "Quoi de mieux qu'un après-midi tranquille à la plage ? L'air salin, le bruit des vagues et la chaleur du soleil sur la peau... C'est un véritable moment de détente et de ressourcement. Après quelques heures de baignade et de promenade, j’ai pris le temps de m'allonger sur le sable et de profiter de l'instant. Le temps semble s'arrêter, et tous les soucis du quotidien s'éloignent. 🌅 #Plage #Relaxation\n\nCes moments de simplicité sont souvent les plus précieux. Passer du temps à la plage me rappelle qu'il est important de s'arrêter parfois et de profiter de la beauté qui nous entoure. Il n'y a pas besoin de grand-chose pour être heureux, juste un peu de temps pour soi et la nature.",
       "author": "Soleil",
@@ -465,7 +469,7 @@
       ]
     },
     {
-      "id": 15,
+      "id": "15",
       "title": "Exploring Urban Art 🎨",
       "content": "Urban art is more than just graffiti; it’s an expressive movement that transforms city landscapes into vibrant galleries. From murals that tell stories to street installations that challenge perceptions, urban art reflects the culture, struggles, and aspirations of the people who live in those spaces. Every street corner holds a potential masterpiece waiting to be discovered. #UrbanArt #StreetArt\n\nDuring a recent walk through the city, I stumbled upon an alley covered in a beautiful mural. It was a stunning representation of resilience, and I couldn’t help but stop and take in the details. I believe urban art has the power to transform not only a space but also the people who experience it. If you haven’t explored your city's street art scene, I highly recommend it!",
       "author": "ArtLover",
@@ -496,7 +500,7 @@
       ]
     },
     {
-      "id": 16,
+      "id": "16",
       "title": "L'importance du sommeil 💤",
       "content": "On underestimate the power of a good night’s sleep, but it is essential for both mental and physical health. When we sleep, our bodies repair and regenerate, our brains process emotions and memories, and our energy is replenished. Sleep is the foundation for a healthy life. #Health #Sleep\n\nI’ve recently adopted a more consistent sleep schedule, and the benefits are undeniable. I feel more energized throughout the day, my focus has improved, and my mood is more balanced. If you're struggling with sleep, I encourage you to try setting a bedtime routine, avoiding screens before bed, and creating a calming environment. It’s a simple but powerful way to prioritize your well-being.",
       "author": "WellnessAdvocate",
@@ -527,7 +531,7 @@
       ]
     },
     {
-      "id": 17,
+      "id": "17",
       "title": "Cooking for the Soul 🍲",
       "content": "Cooking is not just about nourishing the body, it’s about feeding the soul. The process of preparing a meal, from selecting ingredients to the final presentation, can be incredibly therapeutic. It’s a chance to get creative and share a piece of yourself with others. #Cooking #Food\n\nI spent the afternoon experimenting with a new recipe, and it turned out better than I could have hoped! The joy of cooking comes not only from the end result but also from the act of creating something with love and care. Whether it’s a simple dish or an elaborate feast, cooking connects us to our traditions and to each other. What’s your favorite recipe to make when you need a little comfort?",
       "author": "ChefInTheMaking",
@@ -558,7 +562,7 @@
       ]
     },
     {
-      "id": 18,
+      "id": "18",
       "title": "La magie des films classiques 🎬",
       "content": "Les films classiques ont un charme intemporel. Ils ont été créés dans un contexte différent, avec des techniques de narration et de production uniques, mais leur capacité à toucher le cœur des spectateurs est toujours aussi forte aujourd’hui. #FilmsClassiques #Cinéma\n\nJ’ai récemment revu un de mes films classiques préférés, et il m’a rappelé à quel point le cinéma d’antan était magique. Les films d’hier ont cette capacité à capturer des moments de pure émotion et à raconter des histoires d’une manière que beaucoup de films modernes n’arrivent pas à égaler. Que ce soit un film muet de Charlie Chaplin ou un chef-d'œuvre de Hitchcock, chaque film classique offre une fenêtre unique sur l’histoire du cinéma.",
       "author": "Cinéphile",
@@ -589,7 +593,7 @@
       ]
     },
     {
-      "id": 19,
+      "id": "19",
       "title": "Building Resilience in Tough Times 💪",
       "content": "Life is full of challenges, but resilience is what allows us to bounce back. Building resilience is not about avoiding difficult situations, but rather about developing the strength to face them head-on. It’s about learning from setbacks, embracing change, and staying hopeful even when times are tough. #Resilience #MentalStrength\n\nDuring a particularly challenging period in my life, I realized that resilience doesn’t come from avoiding problems; it comes from embracing them. It’s about having the courage to keep going, even when things don’t go as planned. Each setback is an opportunity to grow stronger. Don’t be afraid to lean on others for support, and remember that it’s okay to take things one day at a time.",
       "author": "StrengthWithin",
@@ -620,7 +624,7 @@
       ]
     },
     {
-      "id": 20,
+      "id": "20",
       "title": "现代科技的未来 🚀",
       "content": "随着科技的不断进步，我们迎来了前所未有的时代。人工智能、量子计算以及生物技术正在改变我们的生活方式。我们未来会见证科技带来更深远的影响，甚至可能是我们从未想过的革命。#科技 #未来\n\n最近，我读了一篇关于量子计算的文章，讨论了它如何改变数据处理和人工智能的进展。这让我对未来充满了期待！随着科技的不断发展，我们的生活和工作方式将不断发生变化。你认为科技会如何塑造我们的未来？",
       "author": "TechExplorer",
@@ -651,7 +655,7 @@
       ]
     },
     {
-      "id": 21,
+      "id": "21",
       "title": "技術の未来 🚀",
       "content": "テクノロジーの進歩は私たちの生活を大きく変えています。人工知能、量子コンピュータ、そしてバイオテクノロジーは、私たちの生活をより良く、効率的にしています。未来のテクノロジーはもっと驚くべきものになるでしょう。#テクノロジー #未来\n\n最近、量子コンピュータに関する記事を読みましたが、それがいかに情報処理や人工知能に革命をもたらすかについて話していました。将来、テクノロジーがどのように発展するのか、非常に楽しみです。みなさんは、テクノロジーの未来についてどのように考えていますか？",
       "author": "TechGuru",
@@ -682,7 +686,7 @@
       ]
     },
     {
-      "id": 22,
+      "id": "22",
       "title": "கலை மற்றும் வரலாறு 🎨",
       "content": "கலை என்பது சமுதாயத்தின் அடையாளங்களைக் காட்டும் ஒரு வகையான மொழி. அதன் மூலம் மக்கள் தங்கள் எண்ணங்களை, உணர்வுகளை, மற்றும் கலாசாரங்களை வெளிப்படுத்துகின்றனர். வரலாற்றின் முக்கியமான தருணங்களை கலை மூலம் பதிவு செய்யும் வாய்ப்பு எப்போதும் உள்ளது. #கலை #வரலாறு\n\nநான் சமீபத்தில் ஒரு புகழ்பெற்ற கலைஞரின் படைப்புகளைக் கண்டு ரசித்தேன். அது சரியான வழியில் இரு காலங்களில் உள்ள தருணங்களை வெளிப்படுத்தியது. கலை மற்றும் வரலாறு எப்போதும் ஒரே அணியில் இணைந்திருக்கும் என்பதில் எனக்கு பெரிதும் நம்பிக்கை உள்ளது.",
       "author": "ArtHistorian",
@@ -713,7 +717,7 @@
       ]
     },
     {
-      "id": 23,
+      "id": "23",
       "title": "अच्छे मानसिक स्वास्थ्य के लिए टिप्स 🧘",
       "content": "मानसिक स्वास्थ्य उतना ही महत्वपूर्ण है जितना शारीरिक स्वास्थ्य। हमें अपनी मानसिक स्थिति को स्थिर और सकारात्मक बनाए रखने के लिए कुछ सरल कदम उठाने चाहिए। ध्यान, योग, और अच्छी नींद के साथ मानसिक स्थिति को बेहतर किया जा सकता है। #MentalHealth #Wellness\n\nमैंने हाल ही में ध्यान करना शुरू किया और इसके फायदे मुझे बहुत अच्छे से महसूस हुए हैं। मेरा मन शांत रहता है और मुझे जीवन के प्रति एक सकारात्मक दृष्टिकोण मिला है। मानसिक स्वास्थ्य के लिए आप क्या करते हैं?",
       "author": "MindfulnessCoach",
@@ -744,7 +748,7 @@
       ]
     },
     {
-      "id": 24,
+      "id": "24",
       "title": "Exploring Nature's Beauty 🌳",
       "content": "Nature has a way of calming the mind and refreshing the soul. Whether it’s a quiet walk through the woods or a hike up a mountain, spending time in nature is a reminder of the beauty and simplicity of life. It’s the perfect escape from the hustle and bustle of daily life. #Nature #OutdoorAdventure\n\nI recently took a weekend trip to the mountains, and the experience was incredibly rejuvenating. The fresh air, the stunning views, and the peaceful surroundings helped me reconnect with myself. If you’re feeling stressed or overwhelmed, I highly recommend getting outside and immersing yourself in nature. It does wonders for the mind!",
       "author": "NatureLover",
@@ -775,7 +779,7 @@
       ]
     },
     {
-      "id": 25,
+      "id": "25",
       "title": "未来科技的影响 🌐",
       "content": "随着人工智能和机器人技术的发展，未来的工作方式将发生巨大变化。越来越多的行业将依赖于机器学习和自动化技术，从而提高生产力和效率。然而，这也可能对就业市场带来一定的挑战。#AI #科技\n\n我最近阅读了一篇关于未来人工智能应用的文章，讨论了它如何在医疗、教育等领域产生深远的影响。未来会有更多基于AI的创新，改变我们的工作和生活方式。",
       "author": "TechVisionary",
@@ -806,7 +810,7 @@
       ]
     },
     {
-      "id": 26,
+      "id": "26",
       "title": "テクノロジーの未来 🚀",
       "content": "テクノロジーの進化は止まりません。新しい技術が次々と登場し、私たちの生活はどんどん便利になっています。今後、AI、ロボット技術、そして仮想現実の発展が注目されます。#テクノロジー #未来\n\n最近、AI技術を活用したアプリケーションについての記事を読みました。それがどのように私たちの日常に役立つかを示しており、非常に興味深いです。未来は確実にテクノロジーの力で変わることでしょう。",
       "author": "InnovationExpert",
@@ -837,7 +841,7 @@
       ]
     },
     {
-      "id": 27,
+      "id": "27",
       "title": "அறிவியல் மற்றும் தொழில்நுட்பம் 🧑‍💻",
       "content": "அறிவியல் மற்றும் தொழில்நுட்பம் இன்று எங்கும் காணப்படும் வல்லமை பெற்ற துறைகளாக விளங்குகின்றன. இந்த துறைகள் உலகின் முன்னேற்றத்தில் முக்கிய பங்காற்றுகின்றன. அறிவியல் சாதனைகள் மருந்து, பொறியியல் மற்றும் உயிரியல் துறைகளில் புதிய முன்னேற்றங்களை உருவாக்குகின்றன. #அறிவியல் #தொழில்நுட்பம்\n\nஇந்த பகுதியில் நான் சமீபத்தில் படித்த ஒரு ஆராய்ச்சி பற்றி பகிர்ந்துகொள்கிறேன், இது உணவுத் தொழில்நுட்பத்தில் ஏற்பட்ட புதிய கண்டுபிடிப்புகளைக் காட்டுகிறது. இதன் மூலம் புதிய உணவு மற்றும் சுகாதார வழிமுறைகள் உருவாக்கப்படுகின்றன.",
       "author": "TechScholar",
@@ -868,7 +872,7 @@
       ]
     },
     {
-      "id": 28,
+      "id": "28",
       "title": "मानसिक स्वास्थ्य के लिए स्वास्थवर्धक आदतें 🧘",
       "content": "स्वस्थ मानसिक स्थिति के लिए शारीरिक और मानसिक स्वास्थ्य का संतुलन बनाए रखना महत्वपूर्ण है। नियमित व्यायाम, ध्यान, और सकारात्मक सोच जैसे आदतें मानसिक भलाइ के लिए लाभकारी हैं। यह हमें तनाव को कम करने और अपने जीवन को बेहतर बनाने में मदद करती हैं। #MentalWellness #HealthyHabits\n\nमैंने हाल ही में योग को अपनी दिनचर्या में शामिल किया है और यह मेरे मानसिक स्वास्थ्य के लिए बहुत फायदेमंद रहा है। यह मुझे शांति और एकाग्रता प्रदान करता है। आप मानसिक स्वास्थ्य को बनाए रखने के लिए क्या करते हैं?",
       "author": "WellnessGuide",
@@ -899,7 +903,7 @@
       ]
     },
     {
-      "id": 29,
+      "id": "29",
       "title": "Sustainability and Green Technologies 🌱",
       "content": "The world is at a crucial point where sustainability must be at the forefront of technological innovations. From renewable energy to waste reduction and green manufacturing processes, sustainable practices are becoming the norm. Green technology is not just an option, it's a necessity. #Sustainability #GreenTech\n\nI recently read an inspiring article about how solar energy is becoming more affordable and accessible to individuals. This shift toward renewable energy could be a game-changer for reducing global carbon footprints. If we can continue to innovate, the future of our planet looks brighter.",
       "author": "EcoInnovator",
@@ -928,6 +932,328 @@
         144,
         145
       ]
+    }
+  ],
+  "languages": [
+    {
+      "value": "af",
+      "label": "Afrikaans",
+      "id": "53f2"
+    },
+    {
+      "value": "sq",
+      "label": "Albanais",
+      "id": "509d"
+    },
+    {
+      "value": "ar",
+      "label": "Arabe",
+      "id": "1b91"
+    },
+    {
+      "value": "hy",
+      "label": "Arménien",
+      "id": "a0e9"
+    },
+    {
+      "value": "az",
+      "label": "Azéri",
+      "id": "b86b"
+    },
+    {
+      "value": "eu",
+      "label": "Basque",
+      "id": "1a5a"
+    },
+    {
+      "value": "bn",
+      "label": "Bengali",
+      "id": "466b"
+    },
+    {
+      "value": "bg",
+      "label": "Bulgare",
+      "id": "e287"
+    },
+    {
+      "value": "ca",
+      "label": "Catalan",
+      "id": "ab81"
+    },
+    {
+      "value": "zh",
+      "label": "Chinois (simplifié)",
+      "id": "9199"
+    },
+    {
+      "value": "zh-TW",
+      "label": "Chinois (traditionnel)",
+      "id": "8881"
+    },
+    {
+      "value": "hr",
+      "label": "Croate",
+      "id": "b84d"
+    },
+    {
+      "value": "cs",
+      "label": "Tchèque",
+      "id": "9bb4"
+    },
+    {
+      "value": "da",
+      "label": "Danois",
+      "id": "fed6"
+    },
+    {
+      "value": "nl",
+      "label": "Néerlandais",
+      "id": "138c"
+    },
+    {
+      "value": "en",
+      "label": "Anglais",
+      "id": "b193"
+    },
+    {
+      "value": "et",
+      "label": "Estonien",
+      "id": "c5d6"
+    },
+    {
+      "value": "fi",
+      "label": "Finlandais",
+      "id": "6c08"
+    },
+    {
+      "value": "fr",
+      "label": "Français",
+      "id": "2915"
+    },
+    {
+      "value": "gl",
+      "label": "Galicien",
+      "id": "0291"
+    },
+    {
+      "value": "ka",
+      "label": "Géorgien",
+      "id": "8feb"
+    },
+    {
+      "value": "de",
+      "label": "Allemand",
+      "id": "f7f9"
+    },
+    {
+      "value": "el",
+      "label": "Grec",
+      "id": "7a43"
+    },
+    {
+      "value": "gu",
+      "label": "Gujarati",
+      "id": "5646"
+    },
+    {
+      "value": "he",
+      "label": "Hébreu",
+      "id": "7fb2"
+    },
+    {
+      "value": "hi",
+      "label": "Hindi",
+      "id": "5595"
+    },
+    {
+      "value": "hu",
+      "label": "Hongrois",
+      "id": "13d1"
+    },
+    {
+      "value": "is",
+      "label": "Islandais",
+      "id": "1dd3"
+    },
+    {
+      "value": "id",
+      "label": "Indonésien",
+      "id": "00a9"
+    },
+    {
+      "value": "ga",
+      "label": "Irlandais",
+      "id": "89d2"
+    },
+    {
+      "value": "it",
+      "label": "Italien",
+      "id": "4521"
+    },
+    {
+      "value": "ja",
+      "label": "Japonais",
+      "id": "d637"
+    },
+    {
+      "value": "kn",
+      "label": "Kannada",
+      "id": "9bc5"
+    },
+    {
+      "value": "kk",
+      "label": "Kazakh",
+      "id": "f596"
+    },
+    {
+      "value": "ko",
+      "label": "Coréen",
+      "id": "4299"
+    },
+    {
+      "value": "lv",
+      "label": "Letton",
+      "id": "5b82"
+    },
+    {
+      "value": "lt",
+      "label": "Lituanien",
+      "id": "8ad8"
+    },
+    {
+      "value": "mk",
+      "label": "Macédonien",
+      "id": "db0e"
+    },
+    {
+      "value": "ms",
+      "label": "Malais",
+      "id": "48d3"
+    },
+    {
+      "value": "ml",
+      "label": "Malayalam",
+      "id": "893e"
+    },
+    {
+      "value": "mt",
+      "label": "Maltais",
+      "id": "e4ec"
+    },
+    {
+      "value": "no",
+      "label": "Norvégien",
+      "id": "ebed"
+    },
+    {
+      "value": "fa",
+      "label": "Persan",
+      "id": "a7fe"
+    },
+    {
+      "value": "pl",
+      "label": "Polonais",
+      "id": "088a"
+    },
+    {
+      "value": "pt",
+      "label": "Portugais",
+      "id": "7c28"
+    },
+    {
+      "value": "pa",
+      "label": "Punjabi",
+      "id": "f2a3"
+    },
+    {
+      "value": "ro",
+      "label": "Roumain",
+      "id": "bd57"
+    },
+    {
+      "value": "ru",
+      "label": "Russe",
+      "id": "8cdf"
+    },
+    {
+      "value": "sr",
+      "label": "Serbe",
+      "id": "661c"
+    },
+    {
+      "value": "sk",
+      "label": "Slovaque",
+      "id": "7db3"
+    },
+    {
+      "value": "sl",
+      "label": "Slovène",
+      "id": "a580"
+    },
+    {
+      "value": "es",
+      "label": "Espagnol",
+      "id": "b84a"
+    },
+    {
+      "value": "sw",
+      "label": "Swahili",
+      "id": "e73c"
+    },
+    {
+      "value": "sv",
+      "label": "Suédois",
+      "id": "b73b"
+    },
+    {
+      "value": "ta",
+      "label": "Tamoul",
+      "id": "acb0"
+    },
+    {
+      "value": "te",
+      "label": "Télougou",
+      "id": "382b"
+    },
+    {
+      "value": "th",
+      "label": "Thaï",
+      "id": "6b6d"
+    },
+    {
+      "value": "tr",
+      "label": "Turc",
+      "id": "4431"
+    },
+    {
+      "value": "uk",
+      "label": "Ukrainien",
+      "id": "9715"
+    },
+    {
+      "value": "ur",
+      "label": "Ourdou",
+      "id": "cf8e"
+    },
+    {
+      "value": "vi",
+      "label": "Vietnamien",
+      "id": "7935"
+    },
+    {
+      "value": "cy",
+      "label": "Gallois",
+      "id": "0850"
+    },
+    {
+      "value": "xh",
+      "label": "Xhosa",
+      "id": "aff9"
+    },
+    {
+      "value": "zu",
+      "label": "Zoulou",
+      "id": "130f"
     }
   ]
 }

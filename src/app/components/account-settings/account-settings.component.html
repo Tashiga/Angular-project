@@ -1,10 +1,21 @@
 <h2>Paramètres de notifications</h2>
-<form class="account-settings-form">
+
+<form *ngIf="settingsForm" [formGroup]="settingsForm" (ngSubmit)="onSubmit()" class="account-settings-form">
     <label>
-        <input type="checkbox" name="email-notifications"> Notifications par email
+        Notifications par email
+        <input type="checkbox" formControlName="emailNotifications"> 
     </label>
     <label>
-        <input type="checkbox" name="sms-notifications"> Notifications par SMS
+        Notifications par SMS 
+        <input type="checkbox" formControlName="smsNotifications"> 
     </label>
-    <button type="submit">Enregistrer les modifications</button>
+    <label>
+        Langue de traduction :
+        <select formControlName="translationLanguage" required>
+            <option *ngFor="let language of availableLanguages" [value]="language.value">
+                {{ language.label }}
+            </option>
+        </select>
+    </label>
+    <button type="submit" [disabled]="settingsForm.invalid">sauvegarder</button>
 </form>

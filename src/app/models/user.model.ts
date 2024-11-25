@@ -5,6 +5,7 @@ export interface User {
     created_at: string;
     bio: string;
     avatar_url: string;
+    settings?: UserSettings;
   }
 
 export const UserInit : User = {
@@ -14,3 +15,9 @@ export const UserInit : User = {
   bio: '',
   avatar_url: '',
 };
+
+export interface UserSettings {
+  emailNotifications: boolean;
+  smsNotifications: boolean;
+  translationLanguage: string;
+}
