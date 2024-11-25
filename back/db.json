@@ -1291,6 +1291,13 @@
       "content": "🌞​​❤️​🔴​🥹​😭​🥰​🤩​😘​\nvous devez tous tester les émojis sur \n - https://emojikeyboard.top/fr/\n​💯​💫​",
       "created_at": "2024-11-25T02:34:26.735Z",
       "userId": "1"
+    },
+    {
+      "id": "bca5",
+      "title": "⚠️​🚨​​Problème - MDP perdu🚨​⚠️​",
+      "content": "🚨Chaque fois qu'on update le User, on perd le mdp de l'User donc faudrait sauvegarder le mdp de façon protected et qu'on puisse l'ajouter dans l'User avant d'update les datas🚨\n🚨​il faudrait qu'on sauvegarde le mdp lors du login() et qu'on ne touche plus (comme une Constante)🚨​",
+      "created_at": "2024-11-25T02:43:35.662Z",
+      "userId": "1"
     }
   ]
 }
