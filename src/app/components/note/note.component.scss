@@ -1,0 +1,56 @@
+.note-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input,
+  textarea {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .notes-list {
+    margin-top: 20px;
+  }
+  
+  .note-item {
+    background-color: #fff;
+    padding: 15px;
+    padding-bottom: 25px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .note-item button {
+    background-color: #f44336;
+    padding: 10px;
+    display: flex;
+    float: right;
+  }
+
+  .note-item p {
+    white-space: pre-wrap;  /* Conserve les sauts de ligne, espaces, etc. */
+    word-wrap: break-word;  /* Assure que le texte long ne dépasse pas du bloc */
+  }
+  
+
+  
+  

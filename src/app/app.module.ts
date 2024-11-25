@@ -20,6 +20,7 @@ import { ConnectionHistoryComponent } from './components/connection-history/conn
 import { AccountSettingsComponent } from './components/account-settings/account-settings.component';
 import { ArticleCommentComponent } from './components/article-comment/article-comment.component';
 import { ArticlePageComponent } from './components/article-page/article-page.component';
+import { NoteComponent } from './components/note/note.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { ArticlePageComponent } from './components/article-page/article-page.com
     AccountSettingsComponent,
     ArticleCommentComponent,
     ArticlePageComponent,
+    NoteComponent,
   ],
   imports: [
     BrowserAnimationsModule,

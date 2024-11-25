@@ -8,6 +8,7 @@ import { ArticleFormComponent } from './components/article-form/article-form.com
 import { ArticlesComponent } from './components/articles/articles.component';
 import { ProfilComponent } from './components/profil/profil.component';
 import { ArticlePageComponent } from './components/article-page/article-page.component';
+import { NoteComponent } from './components/note/note.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'articles', component: ArticlesComponent },
   { path: 'article/:id', component: ArticlePageComponent },
   { path: 'profile', component: ProfilComponent },
+  { path: 'notes', component: NoteComponent },
   { path: 'user-profile/:username', component: ArticlePageComponent },
   { path: '**', component: ErrorPageComponent }
 ];

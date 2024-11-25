@@ -1,0 +1,21 @@
+<div class="note-container">
+    <h2>Mes notes</h2>
+
+    <button (click)="toggleFormVisibility()" class="toggle-form-btn"> Nouveau note </button>
+  
+    <form *ngIf="isFormVisible" [formGroup]="noteForm" (ngSubmit)="addNote()">
+      <input type="text" formControlName="title" placeholder="Titre" />
+      <textarea formControlName="content" placeholder="Contenu"></textarea>
+      <button type="submit" [disabled]="noteForm.invalid">Ajouter une note</button>
+    </form>
+  
+    <div class="notes-list">
+      <div *ngFor="let note of notes" class="note-item">
+        <h3>{{ note.title }}</h3>
+        <p>{{ note.content }}</p>
+        <small>{{ note.created_at | date }}</small>
+        <button (click)="deleteNote(note.id)">Supprimer</button>
+      </div>
+    </div>
+</div>
+  
