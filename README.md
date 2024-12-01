@@ -8,6 +8,11 @@ Un projet de blog simple développé avec Angular et un backend JSON Server. Ce 
 - [Angular CLI](https://angular.io/cli) (version 16)
 - [JSON Server](https://github.com/typicode/json-server)
 
+## Membres
+
+- Sashtiga SASIRAJAH
+- Brahim BEN EL HADJ
+
 ## Installation
 
 1. **Cloner le dépôt** :
