@@ -52,14 +52,8 @@ L'application sera disponible à l'adresse `http://localhost:4200`.
 
 - **Authentification** : Inscription et connexion des utilisateurs.
   
-- **Gestion des articles** : Affichage des articles avec les commentaires et les likes.
+- **Gestion des articles** : Affichage des articles avec les commentaires et les likes. Il peut créer un articles et le visualiser. Il peut visualiser un article en detail ou visualiser tous les articles.
 
-- **Système de commentaires** : Ajout de commentaires aux articles.
+- **Profil de l'utilisateur** : Gérer son profil. Il peut consulter et modifier ses informations.
 
-- **Likes sur les articles** : Possibilité d'ajouter des likes aux articles.
-
-- **Filtrage et recherche** : Possibilité de trouver des articles filtrés par le titre, l'auteur ou catégorie.
-
-- **Profil de l'utilisateur** : Gérer son profil et affichage des articles et commentaires publié par l'utilisateur.
-
-- **Système de notification** (optionnel) : Réception d'une notification lorsqu'un de ses articles est commenté ou liké.
+- **Système de bloc-notes** : Il peut sauvegardé des notes et supprimer un note. Seul les notes créer par l'utilisateur sont affichées.
