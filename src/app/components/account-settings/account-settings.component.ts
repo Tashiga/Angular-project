@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { language } from 'src/app/models/language.model';
 import { User, UserInit, UserSettings } from 'src/app/models/user.model';
@@ -17,6 +17,7 @@ export class AccountSettingsComponent implements OnInit{
 
   @Input('user') 
   user: User = UserInit;
+  @Output() settingsUpdated = new EventEmitter<UserSettings>();
 
   constructor(private fb: FormBuilder, 
               private languageService: LanguageService,
@@ -47,6 +48,7 @@ export class AccountSettingsComponent implements OnInit{
           next: (updatedUser) => {
             this.user = updatedUser;
             alert('Modifications enregistrées avec succès !');
+            this.settingsUpdated.emit(updatedSettings);
           },
           error: (err) => alert('Une erreur s\'est produite. Veuillez réessayer.')
         }); 

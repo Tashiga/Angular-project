@@ -24,6 +24,7 @@ import { NoteComponent } from './components/note/note.component';
 import { TruncatePipe } from './customs/pipes/truncate.pipe';
 import { DefaultAvatarPipe } from './customs/pipes/default-avatar.pipe';
 import { ButtonStyleDirective } from './customs/directives/button-style.directive';
+import { RouterListComponent } from './components/router-list/router-list.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { ButtonStyleDirective } from './customs/directives/button-style.directiv
     TruncatePipe,
     DefaultAvatarPipe,
     ButtonStyleDirective,
+    RouterListComponent,
   ],
   imports: [
     BrowserAnimationsModule,

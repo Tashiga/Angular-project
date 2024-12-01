@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User, UserInit } from 'src/app/models/user.model';
+import { User, UserInit, UserSettings } from 'src/app/models/user.model';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -33,6 +33,11 @@ export class ProfilComponent implements OnInit {
         };
       }
     })
+  }
+
+  onSettingsUpdated(updatedSettings: UserSettings): void {
+    this.user.settings = updatedSettings;  // Mettez à jour les paramètres de l'utilisateur
+    console.log('Paramètres mis à jour:', updatedSettings);
   }
 
   startEditing(field: string): void {

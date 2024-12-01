@@ -11,14 +11,16 @@
         </section>
         <!-- Paramètres de compte : notifications -->
         <section class="account-settings-section">
-            <app-account-settings [user] = user></app-account-settings>
+            <app-account-settings (settingsUpdated)="onSettingsUpdated($event)" [user] = user></app-account-settings>
         </section>
         <!-- visionner les actions de l'utilisateur (articles, commentaires ou likes) -->
-        <section>
-            <h2>Bonjour</h2>
+        <section class="navigation-list small-cards">
+            <app-router-list></app-router-list>
         </section>
     </div>
-    <h1 class="page-title logout" (click)="logOut()">Déconnecter</h1>
+    <div class="page-title logout" >
+        <button (click)="logOut()" appButtonStyle>Déconnecter</button>
+    </div>
 </div>
 
 <div *ngIf="!isLoggedIn">
