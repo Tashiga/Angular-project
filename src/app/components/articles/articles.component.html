@@ -12,7 +12,7 @@
         <span class="article-date">{{ article.created_at | date:'dd/MM/yyyy' }}</span>
       </div>
   
-      <p class="article-content">{{ getText(article.content) }}</p>
+      <p class="article-content">{{ article.content | truncate }}</p>
       
       <div class="article-footer">
         <div class="tags">
@@ -25,10 +25,10 @@
       </div>
 
       <div class="button-container-view-more">
-        <button [routerLink]="['/article', article.id]">Voir en détails</button>
+        <button [routerLink]="['/article', article.id]" appButtonStyle>Voir en détails</button>
       </div>
       
-      <!-- <app-article-comment [comments]=article.comments></app-article-comment> -->
+      <app-article-comment [comments]=article.comments></app-article-comment>
     </div>
   </div>
   

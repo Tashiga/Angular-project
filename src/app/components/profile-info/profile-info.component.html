@@ -1,9 +1,9 @@
 <div class="profile-header" [formGroup]="profileForm">
-    <img [src]="user.avatar_url" alt="Photo de profil" class="profile-avatar">
+    <img [src]="user.avatar_url | defaultAvatar" alt="Photo de profil" class="profile-avatar">
   
     <!-- Username Edit -->
     <div class="editable-field">
-      <h2 *ngIf="!isEditing['username']" (click)="startEditing('username')">
+      <h2 *ngIf="user.username && !isEditing['username']" (click)="startEditing('username')">
         {{ user.username }}
         <span class="edit-icon">✏️</span>
       </h2>
@@ -12,7 +12,7 @@
   
     <!-- Email Edit -->
     <div class="editable-field">
-      <p *ngIf="!isEditing['email']" (click)="startEditing('email')">
+      <p *ngIf="user.email && !isEditing['email']" (click)="startEditing('email')">
         {{ user.email }}
         <span class="edit-icon">✏️</span>
       </p>
@@ -21,7 +21,7 @@
   
     <!-- Bio Edit -->
     <div class="editable-field">
-      <p *ngIf="!isEditing['bio']" (click)="startEditing('bio')">
+      <p *ngIf="user.bio && !isEditing['bio']" (click)="startEditing('bio')">
         {{ user.bio }}
         <span class="edit-icon">✏️</span>
       </p>
@@ -34,7 +34,7 @@
   
     <!-- Update Button -->
     <div *ngIf="showUpdateButton" class="update-button-container">
-      <button (click)="saveChanges()">Update</button>
+      <button (click)="saveChanges()" >Update</button>
       <button (click)="cancelEditing()">Cancel</button>
     </div>
   </div>

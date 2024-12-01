@@ -1,32 +1,52 @@
 <div class="signup-page">
-    <div class="signup-container">
-      <h2>S'inscrire</h2>
-      <form (submit)="onSubmit()">
-        <div class="input-group">
-          <label for="firstName">Prénom</label>
-          <input type="text" id="firstName" name="firstName" placeholder="Entrez votre prénom" required />
+  <div class="signup-container">
+    <h2>S'inscrire</h2>
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input id="username" formControlName="username" placeholder="Entrez votre username" />
+        <div *ngIf="signupForm.get('username')?.touched && signupForm.get('username')?.invalid">
+          Le prénom est requis.
         </div>
-        <div class="input-group">
-          <label for="lastName">Nom</label>
-          <input type="text" id="lastName" name="lastName" placeholder="Entrez votre nom" required />
+      </div>
+
+      <div class="input-group">
+        <label for="bio">Bio</label>
+        <input id="bio" formControlName="bio" placeholder="Entrez votre bio" />
+        <div *ngIf="signupForm.get('bio')?.touched && signupForm.get('bio')?.invalid">
+          Le nom est requis.
         </div>
-        <div class="input-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="Entrez votre email" required />
+      </div>
+
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input id="email" formControlName="email" placeholder="Entrez votre email" />
+        <div *ngIf="signupForm.get('email')?.touched && signupForm.get('email')?.invalid">
+          Entrez une adresse email valide.
         </div>
-        <div class="input-group">
-          <label for="password">Mot de passe</label>
-          <input type="password" id="password" name="password" placeholder="Entrez votre mot de passe" required />
+      </div>
+
+      <div class="input-group">
+        <label for="password">Mot de passe</label>
+        <input id="password" type="password" formControlName="password" placeholder="Entrez votre mot de passe" />
+        <div *ngIf="signupForm.get('password')?.touched && signupForm.get('password')?.hasError('passwordInvalid')">
+          {{ signupForm.get('password')?.getError('passwordInvalid') }}
         </div>
-        <div class="input-group">
-          <label for="confirmPassword">Confirmer le mot de passe</label>
-          <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirmer votre mot de passe" required />
+      </div>
+
+      <div class="input-group">
+        <label for="confirmPassword">Confirmer le mot de passe</label>
+        <input id="confirmPassword" type="password" formControlName="confirmPassword" placeholder="Confirmez votre mot de passe" />
+        <div *ngIf="signupForm.hasError('passwordsDontMatch')">
+          Les mots de passe ne correspondent pas.
         </div>
-        <button type="submit" class="signup-btn">S'inscrire</button>
-        <div class="login-link">
-          <p>Vous avez déjà un compte ? <a href="/login">Se connecter</a></p>
-        </div>
-      </form>
-    </div>
+      </div>
+
+      <button type="submit" class="signup-btn" [disabled]="signupForm.invalid">S'inscrire</button>
+      <div class="login-link">
+        <p>Vous avez déjà un compte ? <a href="/login">Se connecter</a></p>
+      </div>
+    </form>
   </div>
+</div>
   

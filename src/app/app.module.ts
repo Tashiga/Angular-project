@@ -21,6 +21,9 @@ import { AccountSettingsComponent } from './components/account-settings/account-
 import { ArticleCommentComponent } from './components/article-comment/article-comment.component';
 import { ArticlePageComponent } from './components/article-page/article-page.component';
 import { NoteComponent } from './components/note/note.component';
+import { TruncatePipe } from './customs/pipes/truncate.pipe';
+import { DefaultAvatarPipe } from './customs/pipes/default-avatar.pipe';
+import { ButtonStyleDirective } from './customs/directives/button-style.directive';
 
 @NgModule({
   declarations: [
@@ -40,6 +43,9 @@ import { NoteComponent } from './components/note/note.component';
     ArticleCommentComponent,
     ArticlePageComponent,
     NoteComponent,
+    TruncatePipe,
+    DefaultAvatarPipe,
+    ButtonStyleDirective,
   ],
   imports: [
     BrowserAnimationsModule,

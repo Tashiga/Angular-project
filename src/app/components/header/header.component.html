@@ -15,7 +15,7 @@
         <a href="/signup" class="signup-btn">S'inscrire</a>
     </div>
     <div class="user-menu" *ngIf="isLogged">
-        <img [src]="user.avatar_url" alt="Avatar de {{ user.username }}" class="user-avatar">
+        <img [src]="user.avatar_url | defaultAvatar" alt="Avatar de {{ user.username }}" class="user-avatar">
         <span class="username">{{ user.username }}</span>
         <div class="dropdown-menu">
           <a routerLink="/profile">Mon Profil</a>

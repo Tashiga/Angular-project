@@ -28,10 +28,6 @@ export class ArticlesComponent implements OnInit {
     });
   }
 
-  getText(content: string): string{
-    return this.textTtruncationService.truncateText(content);
-  }
-
   async translate() :  Promise<void> {
     if(!this.translated){
       const translationPromises = this.articles.map(async (article) => {

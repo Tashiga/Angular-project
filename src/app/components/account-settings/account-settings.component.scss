@@ -57,28 +57,6 @@ form {
     border-color: #007bff;
   }
   
-  button {
-    width: 35%;
-    max-width: 300px;
-    padding: 10px;
-    font-weight: bold;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-  }
-  
   .error-message {
     color: #d9534f;
     font-size: 12px;

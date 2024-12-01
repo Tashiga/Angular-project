@@ -68,6 +68,7 @@ export class AuthService {
           bio: user[0].bio,
           avatar_url: user[0].avatar_url
         }
+        console.log("user get : ", userInfos);
         this.userInfoSubject.next(userInfos);
         localStorage.setItem('userInfo', JSON.stringify(userInfos));
       }
